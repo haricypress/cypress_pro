@@ -1,4 +1,4 @@
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+// const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const { defineConfig } = require("cypress");
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
 module.exports = defineConfig({
@@ -14,7 +14,7 @@ module.exports = defineConfig({
     
       // implement node event listeners here
       on('task', { downloadFile })
-      allureWriter(on, config);
+      // allureWriter(on, config);
             return config;
     },
   },

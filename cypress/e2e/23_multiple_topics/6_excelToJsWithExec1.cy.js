@@ -13,6 +13,7 @@ describe('verifying import data from JSON file and submit multiple jobTitles', (
     })
 
     jobTitles.forEach((data) => {  // getting jobTitle details one by one from JSON file
+
         it('test 1. verifying add multiple jobTitles from json file, session used', function () {
 
             cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList')
