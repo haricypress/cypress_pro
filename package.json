@@ -1,0 +1,24 @@
+{
+  "name": "cypress_pro",
+  "version": "1.0.0",
+  "description": " ",
+  "main": "cypress.config.js",
+  "dependencies": {
+    "cypress": "^13.2.0",
+    "cypress-downloadfile": "^1.2.3",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run_js": "node cypress/e2e/023_/4_excelToJson.js",
+    "o" : "npx cypress open"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
