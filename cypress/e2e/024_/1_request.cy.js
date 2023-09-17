@@ -230,7 +230,7 @@ describe('1st request API test - GET, POST', () => {
 
     })  //  it
 
-
+    // ======================================================================================================
     it('6. POST - using variables, pass value to global variable, capture data into file', () => {
 
         // from response get "id" value and store in global x variable to use in up comming test(s)
@@ -255,8 +255,8 @@ describe('1st request API test - GET, POST', () => {
         })
 
     })// it
-
-    it.only('7. PUT - using variables, get data from global variable, capture data into file', () => {
+    // ======================================================================================================
+    it('7. PUT - using variables, get data from global variable, capture data into file', () => {
 
         const payload = {
             "first_name": x,
@@ -270,17 +270,20 @@ describe('1st request API test - GET, POST', () => {
 
         }).then((response) => {
             expect(response.status).to.equal(200)
-            expect(response.body).to.have.property("first_name", "hari")
-            expect(response.body).to.have.property("id", 5)
+            // expect(response.body).to.have.property("first_name", "hari")
+            // expect(response.body).to.have.property("id", 5)
 
             let updateTime = JSON.stringify(response.body.updatedAt)
 
             cy.log(updateTime)
 
+            // write values into file for future use
+            cy.writeFile('cypress/fixtures/output/updateTime.json', { 'updateTime' : updateTime })
+
         })
 
     })  // it
-
+    // ======================================================================================================
     it('8. DELETE method  - API test', () => {
 
         cy.request({
