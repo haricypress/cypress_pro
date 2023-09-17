@@ -284,7 +284,7 @@ describe('1st request API test - GET, POST', () => {
 
     })  // it
     // ======================================================================================================
-    it.only('8. DELETE method  - API test', () => {
+    it('8. DELETE method  - API test', () => {
 
         cy.request({
             method: 'DELETE',
