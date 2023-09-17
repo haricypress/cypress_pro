@@ -137,7 +137,7 @@ describe('1st request API test - GET, POST', () => {
 
 
 
-    it('2.  GET method - list users - "have.property" demo', () => {
+    it('2.  GET method - list users - have.property', () => {
 
         cy.request({
 
