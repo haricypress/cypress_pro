@@ -233,7 +233,7 @@ describe('1st request API test - GET, POST', () => {
     // ======================================================================================================
     it('6. POST - using variables, pass value to global variable, capture data into file', () => {
 
-        // from response get "id" value and store in global x variable to use in up comming test(s)
+        // from response get "name" value and assign to global x variable to use in up comming test(s)
 
         cy.request({
 
@@ -244,23 +244,22 @@ describe('1st request API test - GET, POST', () => {
         }).then((response) => {
 
             var time = JSON.stringify(response.body.createdAt)
-            x = JSON.stringify(response.body.id)  // assigning value to global variable
+            x = (response.body.name)  // assigning value to global variable
 
             cy.log('time : ' + time)
-            cy.log('id : ' + x)
+            cy.log('name : ' + x)
 
             // write values into file for future use
-            cy.writeFile('cypress/fixtures/output/API_data.json', { 'id': x, "time": time })
+            cy.writeFile('cypress/fixtures/output/API_time.json', { 'name': x, "time": time })
 
         })
 
     })// it
     // ======================================================================================================
-    it('7. PUT - using variables, get data from global variable, capture data into file', () => {
-
+    it('7. PUT ( update ) - get data from global variable to assign value, capture data into file', () => {
         const payload = {
-            "first_name": x,
-            "id": 2
+            "name": x,
+            "job": "trainer"
         }
 
         cy.request({
@@ -271,22 +270,21 @@ describe('1st request API test - GET, POST', () => {
         }).then((response) => {
             expect(response.status).to.equal(200)
 
-            //Error statements, need to correct
-            // expect(response.body).to.have.property("first_name", "hari")
-            // expect(response.body).to.have.property("id", 5)
+            expect(response.body).to.have.property("name", "hari")
+            expect(response.body).to.have.property("job", "trainer")
 
             let updateTime = JSON.stringify(response.body.updatedAt)
 
             cy.log(updateTime)
 
             // write values into file for future use
-            cy.writeFile('cypress/fixtures/output/updateTime.json', { 'updateTime' : updateTime })
+            cy.writeFile('cypress/fixtures/output/updateTime.json', { 'updateTime': updateTime })
 
         })
 
     })  // it
     // ======================================================================================================
-    it('8. DELETE method  - API test', () => {
+    it.only('8. DELETE method  - API test', () => {
 
         cy.request({
             method: 'DELETE',
