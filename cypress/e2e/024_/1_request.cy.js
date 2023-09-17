@@ -1,7 +1,7 @@
 import user_data from '../../fixtures/24_API_testing/body.json'
 
 describe('1st request API test - GET, POST', () => {
-
+    var x
     it('1. GET method - list users', () => {
 
         // cy.request('GET', 'https://reqres.in/api/users?page=2').then((response) => {
@@ -10,8 +10,8 @@ describe('1st request API test - GET, POST', () => {
 
         cy.request({
 
-            methods: 'GET',
-            url: 'https://reqres.in/api/users?page=2'  // GET - list users
+            method: 'GET',
+            url: 'https://reqres.in/api/users?page=2' // GET method - list users
 
         }).then((response) => {
 
@@ -175,7 +175,7 @@ describe('1st request API test - GET, POST', () => {
         }).then((response) => {
 
 
-            expect(response).to.have.property('status', 200)  
+            expect(response).to.have.property('status', 200)
             expect(response.body.data.id).to.equal(2)
             expect(response.body.data.email).to.equal('janet.weaver@reqres.in')
         })
@@ -231,23 +231,69 @@ describe('1st request API test - GET, POST', () => {
     })  //  it
 
 
-it.only('6. POST - using variables, write into file', () => {
+    it('6. POST - using variables, pass value to global variable, capture data into file', () => {
 
-    cy.request(
-        
-        'POST','https://reqres.in/api/users',user_data
-    
-    ).then((response) => {
+        // from response get "id" value and store in global x variable to use in up comming test(s)
 
-    var time = JSON.stringify(response.body.createdAt)
-    var x = JSON.stringify(response.body.id)
+        cy.request({
 
-    cy.log(time)
-    cy.log(x)
+            method: 'POST',
+            url: 'https://reqres.in/api/users',
+            body: user_data
 
-    cy.writeFile('cypress/fixtures/output/API_data.json',{'id': x,"time":time})
+        }).then((response) => {
 
-    })
+            var time = JSON.stringify(response.body.createdAt)
+            x = JSON.stringify(response.body.id)  // assigning value to global variable
 
-})
+            cy.log('time : ' + time)
+            cy.log('id : ' + x)
+
+            // write values into file for future use
+            cy.writeFile('cypress/fixtures/output/API_data.json', { 'id': x, "time": time })
+
+        })
+
+    })// it
+
+    it.only('7. PUT - using variables, get data from global variable, capture data into file', () => {
+
+        const payload = {
+            "first_name": x,
+            "id": 2
+        }
+
+        cy.request({
+            method: 'PUT',
+            url: 'https://reqres.in/api/users/2',
+            body: payload
+
+        }).then((response) => {
+            expect(response.status).to.equal(200)
+            expect(response.body).to.have.property("first_name", "hari")
+            expect(response.body).to.have.property("id", 5)
+
+            let updateTime = JSON.stringify(response.body.updatedAt)
+
+            cy.log(updateTime)
+
+        })
+
+    })  // it
+
+    it('8. DELETE method  - API test', () => {
+
+        cy.request({
+            method: 'DELETE',
+            url: 'https://reqres.in/api/users/2'
+
+        }).then((response) => {
+
+            expect(response.status).to.equal(204)
+
+        })
+
+    })  // it
+
+
 })// describe
