@@ -270,6 +270,8 @@ describe('1st request API test - GET, POST', () => {
 
         }).then((response) => {
             expect(response.status).to.equal(200)
+
+            //Error statements, need to correct
             // expect(response.body).to.have.property("first_name", "hari")
             // expect(response.body).to.have.property("id", 5)
 
