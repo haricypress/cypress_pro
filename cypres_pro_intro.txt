@@ -228,3 +228,9 @@ solved
 
 Note : coding / scripts never effect
 =========================================================================================
+
+in API testing no need "locators",
+to pass received data from one test case to another test case use global variable i.e., var.
+
+=========================================================================================
+
