@@ -1,0 +1,71 @@
+
+first time BDD configuration  :
+===============================
+
+1)  run CMD command    :   npm install --save-dev cypress-cucumber-preprocessor
+
+
+
+
+2)  add below lines at "cypress/plugins/index.js" ( create folder and file manually )
+
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
+
+
+
+
+3) paste below line at "cypress/config.js" under   e2e :{
+ 
+  "specPattern": "**/*.feature",
+
+
+
+
+4) paste below lines in package.json   :
+
+
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+
+} ( Note : this is last line in file )
+
+
+
+
+
+5) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.js"  file
+
+
+  search for    :   confStepDefinitions || `cypress${path.sep}integration`;
+
+  change to     :   confStepDefinitions || `cypress${path.sep}e2e`;
+
+
+6) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.test.js"  file
+
+
+search for    :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}integration`;
+
+change to     :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}e2e`;
+
+
+
+// =============================================================================================
+
+
+/*
+
+in ".feature" file : 
+====================
+
+Feature     is like describe in "cy.js" file
+scenario    is like it() in "cy.js" file
+Given      is like method name in "cy.js" file
+
+*/
