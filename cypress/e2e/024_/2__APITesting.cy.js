@@ -1,6 +1,6 @@
 import user_data from '../../fixtures/24_API_testing/body.json'
 
-describe('1st request API test - GET, POST', () => {
+describe('1st request API test - GET, POST, PUT, DELETE', () => {
     var x
     it('1. GET method - list users', () => {
 
