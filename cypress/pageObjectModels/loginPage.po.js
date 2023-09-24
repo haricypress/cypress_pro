@@ -7,11 +7,18 @@ class loginPage {
     }
 
     credentialUname() {
-        // return cy.get('input[name=username]').type(Cypress.env('username'))
-        return cy.get('input[name=username]')
+        return cy.get('input[name="username"]').type(Cypress.env('username'))
+    }
+    userName() {
+
+        return cy.get('input[name="username"]')
     }
     credentialPwd() {
         return cy.get('input[name="password"]').type(Cypress.env('password'))
+
+    }
+    password() {
+        return cy.get('input[name="password"]')
     }
     wrongCredentialUsername = 'Admina'
 

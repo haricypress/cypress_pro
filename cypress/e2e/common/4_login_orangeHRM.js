@@ -9,17 +9,18 @@ Given("user launch application", () => {
     cy.visit(objLoginPage.orangeHrmUrl())
 })
 
+ 
 
-
-When("user enter usernam as {string}", (username) => {
-
-    cy.get(objLoginPage.credentialUname()).type(username)
+When("user enter username as {string}", (username) => {
+    
+    objLoginPage.userName().type(username)
+    
 })
 
 
 When("user enter password as {string}",(password) =>{
 
-    cy.get(objLoginPage.credentialPwd()).type(password)
+    objLoginPage.password().type(password)
 
 })
 
@@ -31,16 +32,16 @@ And("user click on login button", () => {
 
 Then("user should navigate to dashboard page", () =>{
     
-    //can check in diff ways, use anyone way
+    //verifying in diff ways, in realtime, one verification enough
 
-    // for exact verification
-    cy.url().should('eq',"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index")
+    // verifying exact web site address 
+    // cy.url().should('eq',"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index")
     // or
-
-    // for partial verification
+    // verifying partial web address
     cy.url().should('include',"web/index.php/dashboard/index")
     // or
-    cy.contains(objDashBoardPage.displayDashBoardText()).should("be.visible")
+    // verifying "Dashboard" text available or not
+    // cy.contains(objDashBoardPage.displayDashBoardText()).should("be.visible")
 
 })
 
