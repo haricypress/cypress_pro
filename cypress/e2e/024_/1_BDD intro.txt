@@ -19,7 +19,7 @@ module.exports = (on, config) => {
 
 
 
-3) paste below line at "cypress/config.js" under   e2e :{
+3) add below line at "cypress/config.js"   under   "e2e :{"
  
   "specPattern": "**/*.feature",
 
@@ -66,6 +66,6 @@ in ".feature" file :
 
 Feature     is like describe in "cy.js" file
 scenario    is like it() in "cy.js" file
-Given      is like method name in "cy.js" file
+Given       is like method name in "cy.js" file
 
 */

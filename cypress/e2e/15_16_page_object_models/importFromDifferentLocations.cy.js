@@ -13,11 +13,11 @@ project folder name  :  cypress_pro
  
  imported file locations:
 
- one.js    : cypress\e2e\15_16_page_object_models\one.po.js
- two.js    : cypress\e2e\15_16_page_object_models\POM\two.po.js
- three.js  : cypress\e2e\three.po.js
- four.js   : cypress\four.po.js
- five.js   : cypress\pageObjectModels\five.po.js
+ one.js    : cypress\e2e\15_16_page_object_models\one.js
+ two.js    : cypress\e2e\15_16_page_object_models\POM\two.js
+ three.js  : cypress\e2e\three.js
+ four.js   : cypress\four.js
+ five.js   : cypress\pageObjectModels\five.js
  six.js    : six.js (this file under main project folder, i.e., cypress_pro)
  
  */
