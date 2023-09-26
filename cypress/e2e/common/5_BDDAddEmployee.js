@@ -1,4 +1,4 @@
-import { Given, And, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, And, When } from "cypress-cucumber-preprocessor/steps";
 
 import objLoginPage from "../../pageObjectModels/loginPage.po"
 import objAndEmployee from "../../pageObjectModels/addEmployee.po"
@@ -8,13 +8,11 @@ Given ("user launch application", () => {
     cy.visit("/")
 
 })
-
 When("user enter usernam as {string}", (username) =>{
 
     objLoginPage.userName().type(username)
 })
-
-And("user enter password as {string}", (password) => {
+When("user enter password as {string}", (password) => {
 
     objLoginPage.password().type(password)
 })
@@ -23,13 +21,12 @@ And("user click on login button", () => {
 
     objLoginPage.button()
 })
-
-Then("user should navigate to dashboard page", () => {
+When("user should navigate to dashboard page", () => {
 
     cy.url().should('include',"web/index.php/dashboard/index")
 })
 
-When("user click on PIM menu", () => {
+And("user click on PIM menu", () => {
 
 objAndEmployee.PIMclick()
 })
