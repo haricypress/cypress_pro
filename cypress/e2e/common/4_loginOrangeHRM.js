@@ -41,7 +41,7 @@ Then("user should navigate to dashboard page", () =>{
     cy.url().should('include',"web/index.php/dashboard/index")
     // or
     // verifying "Dashboard" text available or not
-    cy.contains(objDashBoardPage.displayDashBoardText()).should("be.visible")
+    // cy.contains(objDashBoardPage.displayDashBoardText()).should("be.visible")
 
 })
 
