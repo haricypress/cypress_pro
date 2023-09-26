@@ -9,7 +9,7 @@ module.exports = defineConfig({
   },
   e2e: {
 
-    // "specPattern": "**/*.feature",
+    "specPattern": "**/*.feature",
 
     baseUrl: 'https://opensource-demo.orangehrmlive.com/',
     // baseUrl : 'https://127.0.0.1/index.html',
