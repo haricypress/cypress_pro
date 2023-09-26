@@ -1,6 +1,6 @@
-import { Given } from "cypress-cucumber-preprocessor/steps";
+import { Given, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("I visit orangehrmlive", () => {
+Given("visit orangehrmlive", () => {
 
     cy.visit("/")
 
@@ -21,7 +21,7 @@ Feature: orangehrmlive                         // this line like test suite ( de
 
   verifying orangehrmlive visit                // like description of test suite
   Scenario: visiting the frontpage             // this like like testcase scenario ( it() )
-  Given I visit orangehrmlive                  // like function
+  Given visit orangehrmlive                  // like function
   Then orangeHRM verification for successfull  //  like function
 
     */

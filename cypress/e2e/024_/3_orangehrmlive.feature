@@ -4,5 +4,5 @@ Feature: orangehrmlive
 
 Scenario: visiting the frontpage
 
-Given I visit orangehrmlive
+Given visit orangehrmlive
 Then orangeHRM verification for successfull

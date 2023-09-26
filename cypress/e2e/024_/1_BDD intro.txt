@@ -59,8 +59,6 @@ change to     :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}e2e
 // =============================================================================================
 
 
-/*
-
 in ".feature" file : 
 ====================
 
@@ -68,4 +66,10 @@ Feature     is like describe in "cy.js" file
 scenario    is like it() in "cy.js" file
 Given       is like method name in "cy.js" file
 
-*/
+
+// =============================================================================================
+
+step implementation files must be inside "e2e"
+in realtime, put all step implementation files in "common" named folder, inside "e2e" folder
+
+// =============================================================================================
