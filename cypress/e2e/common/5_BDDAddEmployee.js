@@ -1,4 +1,4 @@
-import { Given, And, When } from "cypress-cucumber-preprocessor/steps";
+import { Given, And, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 import objLoginPage from "../../pageObjectModels/loginPage.po"
 import objAndEmployee from "../../pageObjectModels/addEmployee.po"

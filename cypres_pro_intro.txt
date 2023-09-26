@@ -220,3 +220,16 @@ to pass received data from one test case to another test case use global variabl
 
 =========================================================================================
 
+on "test runner" to display multiple "extensions"
+goto configuration file ( cypress.config.js ) and add like below,
+
+e2e: {
+     
+    // "specPattern":"**/*.cy.js",               // to display only "cy.js" files
+    // "specPattern":"**/*.feature",             // to display only ".feature" files
+    // "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
+
+    "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
+
+    
+=========================================================================================
