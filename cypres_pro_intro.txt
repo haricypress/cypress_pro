@@ -12,20 +12,6 @@ first time install cypress, create empty folder for cypress project
 
 open cypress project folder in CMD prompt, follow below commands
     
-    project address in local PC   :   D:\cypress_pro\cypre
-my cypress repository for clone  :
-
-https://github.com/haricypress/cypress_pro/ 
-
-================================================================================
-1)
-
-note : for "n" no.of cypress projects, install cypress "n" no.of times
-
-first time install cypress, create empty folder for cypress project
-
-open cypress project folder in CMD prompt, follow below commands
-    
     project address in local PC   :   D:\cypress_pro\cypress
 
     in  CMD  promt location       :  D:\cypress_pro\cypress>
