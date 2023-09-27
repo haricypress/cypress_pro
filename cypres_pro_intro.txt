@@ -169,3 +169,9 @@ e2e: {
 	
 ==========================================================================================
 14)
+command to use different config file in test runner :
+npx cypress open --config-file 'cypress.config1.js'
+
+here, "cypress.config1.js" is another cypress config file, not default config file
+==========================================================================================
+15)

@@ -1,4 +1,4 @@
-import objLoginPage from "../po_lists/loginPage.po"
+import objLoginPage from "../../pageObjectModels/loginPage.po"
 import objEmploymentStatus from "../../pageObjectModels/emplymentStatus.po"
 
 describe('verify to Add Employment status', () => {
