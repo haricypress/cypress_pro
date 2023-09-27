@@ -73,3 +73,15 @@ step implementation files must be inside "e2e"
 in realtime, put all step implementation files in "common" named folder, inside "e2e" folder
 
 // =============================================================================================
+
+Background:
+ working as Background to all, like BeforeEach()
+
+// =============================================================================================
+
+Scenario Outline :
+
+using for Data Driven Testing
+upto below 10 input values Recommonded
+
+// =============================================================================================

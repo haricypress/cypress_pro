@@ -1,7 +1,7 @@
 Feature: verifying orangeHRM
     verifying orangeHRM
 
-Background: navigate upto Employee page 
+Background: navigate upto Employee page    
     Given user launch application
     When user enter usernam as "Admin"
     When user enter password as "admin123"
@@ -11,12 +11,17 @@ Background: navigate upto Employee page
     And user click on add employee
 
 
-Scenario: verifying add employee
-    And user enter firstname as "hari"
-    And user enter lastname as "kishore"
+
+Scenario Outline: verifying add employee   
+    And user enter firstname as "<firstname>"
+    And user enter lastname as "<lastname>"
     And user click on save button
     Then user should get successfull message
-
+Examples:
+|firstname|lastname|
+|Hari|Kishore|
+|Vishnu|Vardhan|
+|Rama|Krishma|
 
 
 Scenario: verifying add employee mandatory details
