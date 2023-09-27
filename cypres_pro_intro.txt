@@ -41,8 +41,10 @@ add      require('cypress-xpath');      statement in       "project_folder\cypre
 4)
 to run cypress test cases in "test runner"  ( in front-end )               :  npx cypress open 
 to run all cypress test cases in "run mode"  ( in background )             :  npx cypress run 
+
 to run specific single script in background "run mode"               :
 npx cypress run --spec 'cypress\e2e\16_CSSBasics\CSS_basics.cy.js'
+
 to run specific single script in front-end "run mode"  , like "test runner"   :
 npx cypress run --headed --spec 'cypress\e2e\16_CSSBasics\CSS_basics.cy.js'
 
@@ -54,7 +56,7 @@ syntax 2 : npx cypress run --spec 'script1 relative path, script2 relative path,
 
 examples : 
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
-or
+
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
 
 ============================================================================================
@@ -65,7 +67,7 @@ syntax 1 : npx cypress run --headed --spec 'script1 relative path','script2 rela
 syntax 2 : npx cypress run --headed --spec 'script1 relative path, script2 relative path, script3 relative path'
 
 npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
-or
+
 npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
 
 ============================================================================================
@@ -81,7 +83,7 @@ solution :  online git reposiroty replacing by local project (push command)
 run below  command in "CMD" at cypress project folder
             
 			project address in local PC   :   D:\cypress_pro\cypress
-            in  CMD  promt location       :  D:\cypress_pro\cypress>
+            in  CMD  promt location         :  D:\cypress_pro\cypress>
             
 			CMD prompt    :     git push -f origin main
             
@@ -158,18 +160,18 @@ to pass data from one test case to another test case use global variable ( i.e.,
 13)
 on "test runner" to display multiple "extension" files : 
 
-goto  "cypress.config.js" and add like below,
+goto  "cypress.config.js" and add any below line,
 
 e2e: {
      
     // "specPattern":"**/*.cy.js",               // to display only "cy.js" files
     // "specPattern":"**/*.feature",             // to display only ".feature" files
-    // "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
-    "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
+           "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
+   // "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
 	
 ==========================================================================================
 14)
-command to use different config file in test runner :
+command to use, another config file in test runner :
 npx cypress open --config-file 'cypress.config1.js'
 
 here, "cypress.config1.js" is another cypress config file, not default config file
