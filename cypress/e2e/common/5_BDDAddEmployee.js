@@ -31,9 +31,9 @@ And("user click on PIM menu", () => {
 objAndEmployee.PIMclick()
 })
 
-And("user click on And employee", () => {
+And("user click on add employee", () => {
 
-    objAndEmployee.AndEmployeeClick()
+    objAndEmployee.addEmployeeClick()
 })
 And("user enter firstname as {string}", (firstName) =>{
 
@@ -47,7 +47,7 @@ And("user enter lastname as {string}", (lastName) => {
 
 And("user click on save button", () => {
 
-    objAndEmployee.savaButton()
+    objAndEmployee.saveButton()
 })
 
 Then("user should get successfull message", () => {
@@ -55,7 +55,7 @@ Then("user should get successfull message", () => {
     objAndEmployee.successMessage()
 })
 
-Then("user should get Error message", () => {
-objAndEmployee.errorMessage()
+Then("user should get required message", () => {
+objAndEmployee.required()
 
 })

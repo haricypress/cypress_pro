@@ -10,19 +10,19 @@ class addEmployee {
     }
 
     firstName() {
-        cy.xpath('//input[name="firstName"]')
+        return cy.xpath('//input[@name="firstName"]')
     }
     lastName() {
-        cy.xpath('//input[name="lastName"]')
+        return cy.xpath('//input[@name="lastName"]')
     }
-    savaButton() {
-        cy.xpath('button[type="submit"]').click()
+    saveButton() {
+        cy.xpath('//button[@type="submit"]').click()
     }
     successMessage() {
-        cy.contains("success").should("be.visible")
+        cy.contains("Successfully").should("be.visible")
     }
-    errorMessage() {
-        cy.contains("Error").should("be.visible")
+    required() {
+        cy.contains("Required").should("be.visible")
     }
 }
 
