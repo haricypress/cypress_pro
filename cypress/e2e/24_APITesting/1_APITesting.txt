@@ -1,0 +1,5 @@
+1)
+in API testing no need "locators",
+the data which is received from API, to pass from one test case to another test case,
+ use global variable ( i.e., var ).
+ ==========================================================================================
