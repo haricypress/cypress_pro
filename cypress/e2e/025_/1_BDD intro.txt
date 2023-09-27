@@ -82,6 +82,7 @@ Background:
 Scenario Outline :
 
 using for Data Driven Testing
-upto below 10 input values Recommonded
+Recommonded upto 10 or 20 input values
+for more values like 50 or 100 or 10,000 or 1,00,000 use "for" loop
 
 // =============================================================================================
