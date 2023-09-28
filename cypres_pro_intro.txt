@@ -66,9 +66,20 @@ to run specific multiple scripts in "run mode" ( in front-end, like test runner 
 syntax 1 : npx cypress run --headed --spec 'script1 relative path','script2 relative path','script3 relative path'
 syntax 2 : npx cypress run --headed --spec 'script1 relative path, script2 relative path, script3 relative path'
 
-npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
+example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
 
-npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
+example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
+
+
+to run all scripts in a folder (can run even outside of "e2e" folder also, if path is correct) :
+
+syntax :  npx cypress run --headed --spec cypress/e2e/sub_folder_name/*.cy.js
+
+example : npx cypress run --headed --spec cypress/e2e/16_xpath/*.cy.js
+
+ here,
+        cypress, e2e, 16_xpath are folder names
+
 
 ============================================================================================
 7)

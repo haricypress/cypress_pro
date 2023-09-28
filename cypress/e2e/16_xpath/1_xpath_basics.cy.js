@@ -6,7 +6,7 @@ import objXpathDashBoardPage from "../../pageObjectModels/xpathDashBoard.po"
 
 describe('xpath basics', () => {
 
-    it.skip('1. verify absolute xpath', () => {
+    it('1. verify absolute xpath', () => {
         //import objXpathBasics from "./1_xpath_basics.po" used
 
         cy.log('test cases started') //just printing
@@ -19,7 +19,7 @@ describe('xpath basics', () => {
     })
     //============================================================================
 
-    it.skip('2. verify relative xpath', () => {
+    it('2. verify relative xpath', () => {
         // import objXpathBasics from "./1_xpath_basics.po" used
         //web page open
         objXpathBasics.url()
@@ -28,7 +28,7 @@ describe('xpath basics', () => {
         objXpathBasics.relativeXpathUname()
     })
     //============================================================================
-    it.skip('3. full text include spaces - xpath', () => {
+    it('3. full text include spaces - xpath', () => {
         
 
         objXpathLoginPage.orangeHrmUrl()
@@ -36,7 +36,7 @@ describe('xpath basics', () => {
     })
 
     //============================================================================
-    it.skip('4. partial text - xpath', () => {
+    it('4. partial text - xpath', () => {
         
 
         objXpathLoginPage.orangeHrmUrl()
@@ -46,7 +46,7 @@ describe('xpath basics', () => {
     })
     
     //============================================================================
-    it.skip('5. AND logic - xpath', () => {
+    it('5. AND logic - xpath', () => {
         
         //web page open
         objXpathLoginPage.orangeHrmUrl()
@@ -57,7 +57,7 @@ describe('xpath basics', () => {
 
     })   
     //============================================================================
-    it.skip('6. OR logic - xpath', () => {
+    it('6. OR logic - xpath', () => {
         
         //web page open
         objXpathLoginPage.orangeHrmUrl()
@@ -67,7 +67,7 @@ describe('xpath basics', () => {
 
     })
     //============================================================================
-    it.skip('7. indexing - xpath', () => {
+    it('7. indexing - xpath', () => {
        
         // syntax : (expression)[1]  or (expression)[2]   or  (expression)[last()]
 
@@ -81,7 +81,7 @@ describe('xpath basics', () => {
    })
 
      //============================================================================
-     it.skip('8. parent node to child node - xpath', () => {
+     it('8. parent node to child node - xpath', () => {
         // syntax  :  (expression)/child node
         //web page open
         objXpathLoginPage.orangeHrmUrl()
@@ -92,7 +92,7 @@ describe('xpath basics', () => {
 
     })
    //============================================================================
-   it.skip('9. child node to parent node - xpath', () => {
+   it('9. child node to parent node - xpath', () => {
     
     //   syntax  :  (expression)/..
     
