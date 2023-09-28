@@ -1,6 +1,6 @@
 
 //calling page object model
-import objCSSBasics from "./CSS_basics.po"
+import objCSSBasics from "../../pageObjectModels/CSS_basics.po"
 
 describe('CSS basics', () => {
 

@@ -1,8 +1,8 @@
 
 //calling page object model
-import objXpathBasics from "./1_xpath_basics.po"
-import objXpathLoginPage from "./1_xpathLoginPage.po"
-import objXpathDashBoardPage from "./xpathDashBoard.po"
+import objXpathBasics from "../../pageObjectModels/xpath_basics.po"
+import objXpathLoginPage from "../../pageObjectModels/xpathLoginPage.po"
+import objXpathDashBoardPage from "../../pageObjectModels/xpathDashBoard.po"
 
 describe('xpath basics', () => {
 

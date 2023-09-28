@@ -1,5 +1,5 @@
 
-import obj_displayDashBoard from "./1_loginOrageHRM.po"
+import obj_displayDashBoard from "../../pageObjectModels/1_loginOrageHRM.po"
 
 describe('verify custom commands', () => {
 

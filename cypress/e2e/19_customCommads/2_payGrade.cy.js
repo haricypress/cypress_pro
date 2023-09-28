@@ -1,5 +1,5 @@
 //importing 
-import objpayGrade from "./2_payGrade.po"
+import objpayGrade from "../../pageObjectModels/2_payGrade.po"
 import loginFixtures from "../../fixtures/orangeHRMlogin.json"
 
 //====================================================================================

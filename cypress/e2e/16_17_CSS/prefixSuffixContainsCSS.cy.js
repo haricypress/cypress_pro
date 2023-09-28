@@ -1,4 +1,4 @@
-import objCSSPrefixSuffix from "./prefixSuffixContainsCSS.po"
+import objCSSPrefixSuffix from "../../pageObjectModels/prefixSuffixContainsCSS.po"
 
 describe('rediff', () => {
 

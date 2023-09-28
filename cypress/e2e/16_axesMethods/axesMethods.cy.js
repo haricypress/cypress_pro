@@ -1,4 +1,4 @@
-import objAxesMethods from "./axesMethods.po"
+import objAxesMethods from "../../pageObjectModels/axesMethods.po"
 
 describe('axes following - xpath', () => {
     it('1. folllowing - xpath', () => {

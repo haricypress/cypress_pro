@@ -1,5 +1,5 @@
 
-import objfirstLastEq from "./firstLastEq.cy.po"
+import objfirstLastEq from "../../pageObjectModels/firstLastEq.cy.po"
 
 describe("verify first()   last()   eq() methods", () => {
 
