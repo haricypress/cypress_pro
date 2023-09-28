@@ -71,6 +71,8 @@ example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\
 example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
 
 
+============================================================================================
+7)
 to run all scripts in a folder (can run even outside of "e2e" folder also, if path is correct) :
 
 syntax :  npx cypress run --headed --spec cypress/e2e/sub_folder_name/*.cy.js
@@ -82,12 +84,12 @@ example : npx cypress run --headed --spec cypress/e2e/16_xpath/*.cy.js
 
 
 ============================================================================================
-7)
+8)
 to stop running scripts:
 press    ctrl+c   in CMD promt
 
 ============================================================================================
-8)
+9)
 git error   :   failed to push some refs to remote
 solution :  online git reposiroty replacing by local project (push command) 
            
@@ -102,7 +104,7 @@ to replace local project by online git reposiroty (pull command )
 CMD prompt   :     git pull -f origin main
 
 ==========================================================================================
-9)
+10)
 allure reports :
 *********
 to install allure reports (run this command in CMD prompt at project folder) :  npm i -D @shelex/cypress-allure-plugin
@@ -138,7 +140,7 @@ to generate new report : allure generate
 to open generated report : allure open
 
 ==========================================================================================
-10)
+11)
 command line to push first time from local pc to github repository  :
 
 echo "# cypress_practice" >> README.md
@@ -154,7 +156,7 @@ haricypress                  -   github account name
 cypress_practice     -   repository name
 
 ==========================================================================================
-11)
+12)
 if cypress not work on any browser, follow below :
 command  : npx cypress open
 Goto File -> View App Data
@@ -164,11 +166,11 @@ Close cypress, open again
 Note : coding / scripts never effect
 
 ==========================================================================================
-12)
+13)
 to pass data from one test case to another test case use global variable ( i.e., var ).
 
 ==========================================================================================
-13)
+14)
 on "test runner" to display multiple "extension" files : 
 
 goto  "cypress.config.js" and add any below line,
@@ -181,10 +183,10 @@ e2e: {
    // "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
 	
 ==========================================================================================
-14)
+15)
 command to use, another config file in test runner :
 npx cypress open --config-file 'cypress.config1.js'
 
 here, "cypress.config1.js" is another cypress config file, not default config file
 ==========================================================================================
-15)
+16)
