@@ -173,7 +173,7 @@ to pass data from one test case to another test case use global variable ( i.e.,
 14)
 on "test runner" to display multiple "extension" files : 
 
-goto  "cypress.config.js" and add any below line,
+goto  "cypress.config.js" and add any below statement, uncomment if need,
 
 e2e: {
      
@@ -184,7 +184,7 @@ e2e: {
 	
 ==========================================================================================
 15)
-command to use, another config file in test runner :
+command to use another config file in test runner :
 npx cypress open --config-file 'cypress.config1.js'
 
 here, "cypress.config1.js" is another cypress config file, not default config file
