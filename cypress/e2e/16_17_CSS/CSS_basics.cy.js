@@ -48,11 +48,12 @@ describe('CSS basics', () => {
         //web page open "shop.demoqa" web page
         objCSSBasics.url()
         // 5) .class using, if any element has class tag in node
-        objCSSBasics.singleClassAttribute()
+        objCSSBasics.singleClassValuedAttribue()
 
 
     })
     it('6. multiple class values in class tribite', () => {
+        objCSSBasics.url()
         // 6) .classvalue1.clasvalue2.classvalue3, if any element has multiple values in "class" attribue
         objCSSBasics.multipleClassValuedAttribute()
     })
@@ -61,13 +62,14 @@ describe('CSS basics', () => {
         // web page open "orangeHRm" web page
         objCSSBasics.url2()
         objCSSBasics.parentTochild()
-        cy.wait(5000)
+        // cy.wait(5000)
     })
 
     it('8. child to parent', () => {
         // web page open "orangeHRm" web page
         objCSSBasics.url2()
         objCSSBasics.childToParent()
+        
     })
 
     it.only('9. goto sibling node', () => {

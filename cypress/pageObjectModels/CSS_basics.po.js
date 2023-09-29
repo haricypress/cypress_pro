@@ -35,7 +35,7 @@ class CSSBasics {
 
     IDAttribute() {
         // 4) #ID_name atribute using to find element
-        return cy, get('id="reg_username"').type('cypress')
+        return cy.get('input[id="reg_username"]').type('cypress')
     }
 
     singleClassValuedAttribue() {
