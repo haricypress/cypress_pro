@@ -72,7 +72,7 @@ describe('CSS basics', () => {
         
     })
 
-    it.only('9. goto sibling node', () => {
+    it('9. goto sibling node', () => {
         // web page open "orangeHRm" web page
         objCSSBasics.url2()
         objCSSBasics.siblingNode()
