@@ -29,7 +29,7 @@ module.exports = (on, config) => {
 4) paste below lines in package.json   :
 
 
-  "cypress-cucumber-preprocessor": {
+,  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
 
