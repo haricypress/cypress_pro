@@ -191,16 +191,10 @@ here, "cypress.config1.js" is another cypress config file, not default config fi
 ==========================================================================================
 16)
 
-git remote add origin https://github.com/haricypress/cypress_pro.git
-git remote -v
+git clone https://github.com/haricypress/cypress_pro.git
 
 
+PS D:\cypress_pro> git remote -v
+origin  https://github.com/haricypress/cypress_pro.git (fetch)
+origin  https://github.com/haricypress/cypress_pro.git (push)
 
-
-
-git clone https://github.com/haricypress/cypress_pro.git     
-
-git remote -v
- git remote set-url origin https://github.com/haricypress/cypress_pro.git
- 
- 
