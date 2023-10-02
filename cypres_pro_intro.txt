@@ -198,3 +198,22 @@ PS D:\cypress_pro> git remote -v
 origin  https://github.com/haricypress/cypress_pro.git (fetch)
 origin  https://github.com/haricypress/cypress_pro.git (push)
 
+==========================================================================================
+17)
+
+Adding a remote repository  :
+
+git remote add origin https://github.com/haricypress/cypress_pro.git
+
+
+to Verify new remote:
+
+git remote -v
+
+output:
+origin  https://github.com/haricypress/cypress_pro.git (fetch)
+origin  https://github.com/haricypress/cypress_pro.git (push)
+
+
+==========================================================================================
+
