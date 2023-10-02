@@ -1,0 +1,12 @@
+
+
+coding in diff places and pushing into a cloud palce like github in raltime,
+
+example for cloud places : github, bitbucket, gitlab, AWS, aure/ other custom cloud places.
+these are calling as source management tools.
+to push and pull between local and  cloud places a technology is using , i.e., version control system.
+in old days SVN used, complare with that GIT is fast and convienent.
+so, now days github is using. Git and Github both are diff.
+
+Git          - version control system.
+Github - cloud storage place.
