@@ -3,7 +3,7 @@
 in raltime, coding in diff places and pushing into a cloud space like github,
 
 examples for cloud spaces : github, bitbucket, gitlab, AWS, aure/ other custom cloud places.
-these are calling as source management tools.
+these are calling as "source management tools".
 to push and pull between local and  cloud places a technology is using , i.e., version control system.
 in old days "SVN" used, compare with "SVN", "Git" is fast and convienent.
 so, now days "Git" is using. Git and Github both are diff.
