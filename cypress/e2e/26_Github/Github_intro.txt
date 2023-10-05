@@ -15,5 +15,5 @@ Github   -  cloud space / storage
 push     -  transfer data from local machine to cloud space (means, local to cloud)
 pull     -  transfer data from cloud space to local machine (means, cloud to local)
 
-============================================================================================================
+=================================================================================================
 
