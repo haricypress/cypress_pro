@@ -24,22 +24,22 @@ describe("fixtures demo", function () {
 
 
 
-/*
-
-test data file location      :      cypress\fixtures\shop.demoqa.json
-
-
-{
-   "userName"       : "kishore",
-   "EmailAddr"     : "kishore@gmail.com",
-   "weakpassword"   : "dsdsd",
-   "strongPassword" : "xfsgfxvxffxgvcx"
-}
-
-
-Note:  in load data technique, you can't find test data file location
-
-*/
+    /*
+    
+    test data file location      :      cypress\fixtures\shop.demoqa.json
+    
+    
+    {
+       "userName"       : "kishore",
+       "EmailAddr"     : "kishore@gmail.com",
+       "weakpassword"   : "dsdsd",
+       "strongPassword" : "xfsgfxvxffxgvcx"
+    }
+    
+    
+    Note:  in load data technique, you can't find test data file location
+    
+    */
 
 
 })

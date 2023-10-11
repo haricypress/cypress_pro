@@ -15,7 +15,7 @@ describe("fixtures demo", function () {
         cy.get("#reg_email").type(this.data.EmailAddr)
         cy.get("#reg_password").type(this.data.weakpassword)
 
-        // cy.get('button[name="register"]').should("be.disabled")
+        cy.get('button[name="register"]').should("be.disabled")
         //or
         // cy.wait(10000)  // waiting for 10 sec, some times web page to disable button taking long time
         cy.get('button[name="register"]').should("have.attr", "disabled", "disabled")
