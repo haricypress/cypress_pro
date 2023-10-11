@@ -194,42 +194,59 @@ here, "cypress.config1.js" is another cypress config file, not default config fi
 git clone https://github.com/haricypress/cypress_pro.git
 
 
-PS D:\cypress_pro> git remote -v
-origin  https://github.com/haricypress/cypress_pro.git (fetch)
-origin  https://github.com/haricypress/cypress_pro.git (push)
-
-==========================================================================================
-17)
-
-Adding a remote repository  :
-
-git remote add origin https://github.com/haricypress/cypress_pro.git
-
-
-to Verify new remote:
-
+CMD command to verify remote : 
 git remote -v
 
 output:
 origin  https://github.com/haricypress/cypress_pro.git (fetch)
 origin  https://github.com/haricypress/cypress_pro.git (push)
 
+==========================================================================================
+17)
+
+to add existing local repository to cloude github,
+
+run below commands in CMD ( at project folder localtion) :
+
+1) git init
+2) git remote add origin https://github.com/haricypress/cypress_pro.git
+
+
+if repository in "master" then  to change from "master" to "main" ( CMD commands)  :
+
+case 1 : 
+======
+
+CMD commands : 
+
+1) git branch --move master main
+2) git push origin main  ( pushing / uploading  normally)
+							or
+	    git push -f origin main  ( pushing / uploading  forcely)
+
+
+case 2 : 
+======
+sometimes first "pull"mandatory, next "push" allowed.
+so, backup scripts / support file / important files, then run below commands,
+
+CMD commands : 
+
+1) git branch --move master main     ( if repository already moved to "main" then it is optional)
+2) git push origin main  /  git push -f origin main  ( run any one command)
+3) git pull origin main (next run 2nd command)
 
 ==========================================================================================
 18)
 
-to add existing local repository to cloude github :
+CMD command to Verify remote :
+git remote -v
 
-1) git init
+example output:
+origin  https://github.com/haricypress/cypress_pro.git (fetch)
+origin  https://github.com/haricypress/cypress_pro.git (push)
 
-2) git remote add origin https://github.com/haricypress/testdemo.git
+==========================================================================================
+19)
 
-
-to change from "master" to "main" ( CMD promots)  :
-
-1) git branch --move master main
-
-2) git pull origin main
-
- 3) git push -f origin main
 
