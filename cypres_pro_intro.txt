@@ -1,3 +1,5 @@
+npx cypress run --headed --spec "cypress\e2e\16_xpath" 
+
 
 my cypress repositories for clone  :
 https://github.com/haricypress/cypress_pro/ 
@@ -52,13 +54,16 @@ npx cypress run --headed --spec 'cypress\e2e\16_CSSBasics\CSS_basics.cy.js'
 5)
 to run specific multiple scripts in "run mode" ( in background ) :
 syntax 1 : npx cypress run --spec 'script1 relative path','script2 relative path','script3 relative path'
-syntax 2 : npx cypress run --spec 'script1 relative path, script2 relative path, script3 relative path'
-
-examples : 
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
 
+syntax 2 : npx cypress run --spec 'script1 relative path, script2 relative path, script3 relative path'
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
 
+
+to run all test script which are under a folder :
+
+syntax 3 : npx cypress run --headed --spec "path upto required folder"
+npx cypress run --headed --spec "cypress\e2e\16_xpath"
 ============================================================================================
 6)
 to run specific multiple scripts in "run mode" ( in front-end, like test runner ) :
@@ -158,8 +163,8 @@ cypress_practice     -   repository name
 ==========================================================================================
 12)
 if cypress not work on any browser, follow below :
-command  : npx cypress open
-Goto File -> View App Data
+CMD command  : npx cypress open
+in browser,   Goto File -> View App Data
 Delete everything in here  ( ctrl +A,  press delete button)
 Close cypress, open again
 
@@ -167,13 +172,14 @@ Note : coding / scripts never effect
 
 ==========================================================================================
 13)
-to pass data from one test case to another test case use global variable ( i.e., var ).
+to pass data within "test suite"  from one "test case" to another "test case" use global variable ( i.e., var ).
 
 ==========================================================================================
 14)
-on "test runner" to display multiple "extension" files : 
+on "test runner" to display files on specific "extensions" : 
 
-goto  "cypress.config.js" and add any below statement, uncomment if need,
+"specPattern" 
+goto  "cypress.config.js" and add statement like below, if multiple statemenmets used, last statement affected.
 
 e2e: {
      
@@ -182,6 +188,12 @@ e2e: {
            "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
    // "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
 	
+note :  mention extensions which you want execute in "test runner".
+example, to run "cy.js" and ".feature" files only, add like below
+
+e2e: {
+           "specPattern": "**/*.{cy.js,feature}",
+		   
 ==========================================================================================
 15)
 command to use another config file in test runner :
