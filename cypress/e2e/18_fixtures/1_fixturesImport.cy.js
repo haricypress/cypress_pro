@@ -1,6 +1,6 @@
 
 import testData from "../../fixtures/shop.demoqa.json"
-import randomEmail  from "../../fixtures/randomEmail.json"
+import randomEmail from "../../fixtures/randomEmail.json"
 
 describe("fixtures demo", () => {
 
@@ -24,7 +24,7 @@ describe("fixtures demo", () => {
         cy.get("#reg_password").type(testData.strongPassword)
         cy.get('button[name="register"]').click()
 
-        
+
         // cy.get("#username").should("have.attr", 'value', testData.userName)
         // or
         cy.get("#username").should("have.value", testData.userName)
@@ -56,22 +56,22 @@ imported test data file location : cypress\fixtures\shop.demoqa.json
 
 */
 
-it.only("randomly generated E-mail address",()=>{
+it.only("randomly generated E-mail address", () => {
 
     // import randomEmail  from "../../fixtures/randomEmail.json"
-    
+
     cy.visit("https://shop.demoqa.com/my-account/")
-        cy.get("#reg_username").type(randomEmail.userName)
-        let r = (Math.random() +1).toString(36).substring(7)
-        cy.get("#reg_email").type(randomEmail.EmailAddr+ r +'@gmail.com')
-        cy.get("#reg_password").type(randomEmail.strongPassword)
+    cy.get("#reg_username").type(randomEmail.userName)
+    let r = (Math.random() + 1).toString(36).substring(7)
+    cy.get("#reg_email").type(randomEmail.EmailAddr + r + '@gmail.com')
+    cy.get("#reg_password").type(randomEmail.strongPassword)
 
-        cy.wait(5000)
-                cy.get('button[name="register"]').click()
+    cy.wait(4000)
+    cy.get('button[name="register"]').click()
 
-        // cy.get("#username").should("have.attr", 'value', testData.userName)
-        // or
-        cy.get("#username").should("have.value", randomEmail.userName)
+    // cy.get("#username").should("have.attr", 'value', testData.userName)
+    // or
+    cy.get("#username").should("have.value", randomEmail.userName)
 
 
 })
