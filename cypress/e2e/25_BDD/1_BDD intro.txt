@@ -71,6 +71,10 @@ Given       is like method name in "cy.js" file
 
 step implementation files must be inside "e2e"
 in realtime, put all step implementation files in "common" named folder, inside "e2e" folder
+place "common" folder under "e2e" folder
+all ".feature" files are searching for step implementations in ".js" files,
+first in same named folder, next in "e2e/common" folder
+searching file names by alphabatic order.
 
 =============================================================================================
 
