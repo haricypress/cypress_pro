@@ -1,15 +1,20 @@
 
-describe("fixtures demo", function () {
+describe("fixtures demo",  ()=> {
 
-    before(function () {  // hook  -  "before"
+    before( ()=> {  // hook  -  "before"
+    
 
         cy.fixture("shop.demoqa").then(function (data) {
-            this.data = data
+            /*    "this.data" - global variable, instead "data", can use any word
+                  declare & access any where inside "test suit", but access after daclare
+                  function() must use*/
+            this.data = data  
+       
         })
     })
 
     it("1. verify submit button disabled or not - weak password", function () {
-
+  
         cy.visit("https://shop.demoqa.com/my-account/")
         cy.get("#reg_username").type(this.data.userName)
         cy.get("#reg_email").type(this.data.EmailAddr)
