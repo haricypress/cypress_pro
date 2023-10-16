@@ -7,11 +7,11 @@ search_text = "str"
 console.log(search_text,' : ',
 (text.match(new RegExp(search_text, "g")) || []).length)
 
-search_text = "am" // without space
+search_text = "am" // "am" with space
 console.log(search_text,' : ',
 (text.match(new RegExp(search_text, "g")) || []).length)
 
 
-search_text = "am "  // with space
+search_text = "am "  // "am" with space
 console.log(search_text,' : ',
 (text.match(new RegExp(search_text, "g")) || []).length)
