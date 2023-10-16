@@ -8,13 +8,16 @@ https://github.com/haricypress/cypress_practice/
 ================================================================================
 1)
 note : for "n" no.of cypress projects, install cypress "n" no.of times
-first time install cypress, create empty folder for cypress project
-open cypress project folder in CMD prompt, follow below commands
+
+first time install cypress,
+
+1) create empty folder for cypress project
+2) open cypress project folder in CMD prompt, follow below commands
     
     project address in local PC   :   D:\cypress_pro\cypress
     location in  CMD  promt        :  D:\cypress_pro\cypress>
 
-CMD prompt commands :
+3) CMD prompt commands :
 command 1 : npm init  ( "package.json"  file will create )
 command 2 : npm install cypress  
 
@@ -225,6 +228,9 @@ run below commands in CMD ( at project folder localtion) :
 
 
 if repository in "master" then  to change from "master" to "main" ( CMD commands)  :
+.
+
+
 
 case 1 : 
 ======
@@ -247,6 +253,17 @@ CMD commands :
 1) git branch --move master main     ( if repository already moved to "main" then it is optional)
 2) git push origin main  /  git push -f origin main  ( run any one command)
 3) git pull origin main (next run 2nd command)
+
+
+case 3 :
+======
+
+have any problem to move "master" to "main"
+
+1) delete git hidden  folder for your cypress project
+2) git init
+3) git branch --move master main
+
 
 ==========================================================================================
 18)
