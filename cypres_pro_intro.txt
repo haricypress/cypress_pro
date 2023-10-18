@@ -33,7 +33,9 @@ run below 3 commands,
 in CMD prompt open project folder,
 command 1 (to clear all previously installed cypress)  :  npx cypress cache clear
 command 2  (to install latest cypress version ) :  npx cypress install
-command 3 (to initiate cypress)      :     npm init
+
+optional : 
+command 3 (to re-initiate cypress)      :     npm init
 
 ===========================================================================================
 3)
@@ -181,8 +183,11 @@ to pass data within "test suite"  from one "test case" to another "test case" us
 14)
 on "test runner" to display files on specific "extensions" : 
 
-"specPattern" 
+"specPattern"  is key
+
 goto  "cypress.config.js" and add statement like below, if multiple statemenmets used, last statement affected.
+
+mention extensions which you want execute in "test runner".
 
 e2e: {
      
@@ -191,8 +196,8 @@ e2e: {
            "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
    // "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
 	
-note :  mention extensions which you want execute in "test runner".
-example, to run "cy.js" and ".feature" files only, add like below
+
+example, to show "cy.js" and ".feature" files only in "test runner", add like below
 
 e2e: {
            "specPattern": "**/*.{cy.js,feature}",
