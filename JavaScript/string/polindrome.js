@@ -1,6 +1,6 @@
 
 //   1221  = 1221 - pollindrome
-//   1234 = 4321 - no pollindrome
+//   1234 = 4321 - not pollindrome
 
 
 // detailed
@@ -44,4 +44,4 @@ function palindromeOrNot(str) {
         console.log("this is not palindrome")
     }
 }
-// palindromeOrNot("ann")  
+palindromeOrNot("ann")  
