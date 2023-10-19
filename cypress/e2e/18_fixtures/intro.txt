@@ -17,7 +17,7 @@ but data changing in "var" variable, not in "cy.fixture()".
 declare "var" variable at starting of script file, if changable data want use in multiple test-suites.
 declare "var" variable under test-suite, if changable data want use in single test-suite only.
 
-4) in javascript,"this" keyword has block scope, but if not declared, it uses parent's data.
+4) in javascript,"this" keyword has block scope, but if using without declare, it uses parent's data.
 example : fixtures_05.cy
 
 5) "puase()" used to debug within test-case,
