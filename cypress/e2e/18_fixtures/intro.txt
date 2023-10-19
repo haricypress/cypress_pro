@@ -1,0 +1,24 @@
+
+1) importing test data : 
+use "import" statement, if test data want use in entire script file (with or without multiple test-suites).
+example : fixtures_01.cy
+
+2) cloading test data with cy.fixture() :
+use "cy.fixture()"  within test-case, if test data want use within single test-case only.
+example : fixtures_02.cy
+
+use "cy.fixture()"  within "beforeEach()" under test-suite, if test data want use in multiple test-cases. 
+example : fixtures_03.cy
+
+3) cy.fixture() using with "var" type variable :
+pass data from "cy.fixture()" to "var" type variable , if changable data want use in multiple test-cases.
+but data changing in "var" variable, not in "cy.fixture()".
+
+declare "var" variable at starting of script file, if changable data want use in multiple test-suites.
+declare "var" variable under test-suite, if changable data want use in single test-suite only.
+
+4) in javascript,"this" keyword has block scope, but if not declared, it uses parent's data.
+example : fixtures_05.cy
+
+5) "puase()" used to debug within test-case,
+click on resume button or press "c" keyword in "test runner" to resume.

@@ -32,7 +32,7 @@ describe("loading test data from fixtures", () => {
         cy.log("1st time", this.data).pause() 
 
          // "puase()" used to debug within test-case
-         // click on resume button or press "c" keyword in "test runner".
+         // click on resume button or press "c" keyword in "test runner" to resume.
 
 
     })
