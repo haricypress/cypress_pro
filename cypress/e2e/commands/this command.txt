@@ -1,0 +1,317 @@
+// 8_1) declare without "function" keyword
+describe("TS1", () => {
+    it("TC1", () => {
+	    this.data = 3 // Error
+    })
+})
+// ===================================================================
+// 8_2) with "function()"   print "this.data" value 
+describe("TS1",     () =>  {
+    it("TC1",  function ()   {
+        this.data = 1
+        cy.log(this.data)
+    })
+})
+// ===================================================================
+// 10_1)  "this" keyword using in two test-cases
+// changing values
+describe("TS1",  ()=> {  
+    it("TC1", function()  {
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC2", function() {
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+// ======================================================
+// 10_2)   "function" keyword apply to all sub blocks, so, no Error. 
+// without "function" keyword Error will raise.
+// changing values
+describe("TS1", function () {  
+    it("TC1", () => {
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC2", () => {
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+// ======================================================
+// 11)  using "typeof()" command
+describe("TS1", function () {
+    this.data = 1
+    it("TC1", () => {
+        cy.log(this.data, typeof(this.data))
+    })
+// ===================================================================
+// 12) print "this" before initial value, using "typeof()" command
+describe("TS1", function () {
+    it("TC1", () => {
+        cy.log(this.data, typeof(this.data))
+        this.data = 1
+        cy.log(this.data, typeof(this.data))
+    })
+// ===================================================================
+// 13)     declare 2 type of functions  - with normal  and "arrow" functions 
+describe("TS1", function () {
+    it("TC3",   () => {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+    it("TC1",  function () {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC2",  function () {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+    it("TC4",   () => {
+        cy.log(this.data)
+        this.data = 4
+        cy.log(this.data)
+    })
+})
+//.................................................................................
+//   14)  "this" keyword - "beforeEach" with normal  and arrow functions - telugu
+describe("TS1", function () {
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })  
+    beforeEach("beforeEach", function () {
+        this.data = "a"
+    })
+    beforeEach("beforeEach", () => {
+        this.data = "b"
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC4", function () {
+        cy.log(this.data)
+        this.data = 4
+        cy.log(this.data)
+    })
+    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+// ======================================================
+ // 15_1) declare outside of test-suite
+this.data = 1 // uncaught Error
+describe("TS1",     () =>  {
+    it("TC1",  function ()   {
+        cy.log(this.data)
+    }) 
+}) 
+// ===================================================================
+ // 15_2) declare within test-suite, but outside sub-block
+
+scenario 1 :
+
+describe("TS1", function () {
+    this.data = 1
+    it("TC1", function () {
+        cy.log(this.data)
+    })
+    it("TC2",  () => {
+        cy.log(this.data)
+    })
+})
+.......................................................................
+scenario 2 :
+
+describe("TS1", function () {
+    this.data = 1
+    it("TC2",  () => {
+        cy.log(this.data)
+    })
+	it("TC1", function () {
+        cy.log(this.data)
+    })
+})
+
+// ======================================================================
+//   16)  "this" keyword - "before" with normal  and arrow functions - telugu
+describe("TS1", function () {
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })  
+    before("before", function () {
+        this.data = "a"
+    })
+    before("before, () => {
+        this.data = "b"
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC4", function () {
+        cy.log(this.data)
+        this.data = 4
+        cy.log(this.data)
+    })
+    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})	
+// =========================================
+// ===================================================================
+//  ) "this" keyword declared within test-suite, but not within sub-block, "before" hook used
+
+
+// scenario 1 :  "before" declared as  "arrow" function
+
+describe("TS1", function () {
+    this.data = "a"
+    before("before", ()=>{
+        cy.log(this.data, typeof(this.data))
+        this.data = "before"
+        cy.log(this.data)
+    })
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+
+..........................................................................................
+
+
+// scenario 2 :  "before" declared with  "function" keyword
+
+describe("TS1", function () {
+    this.data = "a"
+    before("before", function ()  {
+        cy.log(this.data, typeof(this.data))
+        this.data = "before"
+        cy.log(this.data)
+    })
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+
+// ===================================================================
+
+//  ) "this" keyword declared within test-suite, but not within sub-block, "beforeEach" hook used
+
+// scenario 1 :  "beforeEach" declared as  "arrow" function
+
+describe("TS1", function () {
+    this.data = "a"
+    beforeEach("beforeEach", ()=>{
+        cy.log(this.data, typeof(this.data))
+        this.data = "beforeEach"
+        cy.log(this.data)
+    })
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+
+..........................................................................................
+
+// scenario 2 :  "beforeEach" declared with  "function" keyword
+
+describe("TS1", function () {
+    this.data = "a"
+    beforeEach("beforeEach", function ()  {
+        cy.log(this.data, typeof(this.data))
+        this.data = "beforeEach"
+        cy.log(this.data)
+    })
+    it("TC1", () => {
+        cy.log(this.data)
+        this.data = 1
+        cy.log(this.data)
+    })
+    it("TC3", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+    })
+	    it("TC2", () => {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data)
+    })
+})
+
+// ===================================================================
+
+//  )     "puase()" is using to debug within test-case.
+// it can use as chainnned command like "cy.log(this.data).pause()"     and       "cy.pause()"
+// to resume testing,  press "c" keyword or click on "resume button" on "test runner".
+describe("TS1", () => {
+    beforeEach("before", function () {
+        cy.log(this.data, typeof (this.data))
+        this.data = 1
+        cy.log(this.data).pause()
+    })
+    it("TC1", function () {
+        cy.log(this.data)
+        this.data = 2
+        cy.log(this.data).pause()
+    })
+    it("TC2", function () {
+        cy.log(this.data)
+        this.data = 3
+        cy.log(this.data)
+        cy.pause()
+    })
+})
+// ===================================================================

@@ -1,4 +1,4 @@
-var str1 = '1234"asfasf"1234'
+var str1 = '1234"as,fasf"1234'
 str2 = '"' // it is also "var" type variable
 
 console.log("string1 : ", str1)
