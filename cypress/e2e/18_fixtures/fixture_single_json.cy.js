@@ -1,5 +1,5 @@
 
-// at 3rd test-case, Error is there - in "json" file write last "," need remove
+// in 4th test-case Error is there - while "json" file writing last "," need remove
 
 describe('verifying - if login manually logout, else check url', () => {
 
@@ -26,8 +26,7 @@ describe('verifying - if login manually logout, else check url', () => {
 
             })// forEach
         })// fixture
-    }) // it
-
+    })// it ==================================================================================
 
     it('2. wrong credentials', () => {
 
@@ -46,9 +45,43 @@ describe('verifying - if login manually logout, else check url', () => {
 
             })// forEach
         })// fixture
-    })// it
+    })// it ==================================================================================
+    it('3. verify single correct credential and multiple wrong credentials', () => {
 
-    it.only('3. sinlge correct credential and multiple wrong credentials', () => {
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+        })
+
+        cy.fixture('login.json').then((data) => {
+
+            data.forEach((userdata) => {
+                cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+
+                cy.get('input[name="username"]').type(userdata.username)
+                cy.get('input[type="password"]').type(userdata.password);
+                cy.get('button[type="submit"]').click();
+
+                if (userdata.username == "Admin" && userdata.password == "admin123") {
+
+                    // if login
+                    cy.get('p.oxd-userdropdown-name').click()
+                    cy.get('a[role="menuitem"]').eq(3).click();
+                    cy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+
+                }// if
+                else {
+
+                    // if not login
+                    cy.contains("Login").should("be.visible")
+
+                }// else
+
+            })// forEach
+        })// fixtures
+
+    })// it ==================================================================================
+
+    it('4. with writefile - single correct credential and multiple wrong credentials', () => {
 
         // Error in this test-case - in "json" file write last "," need remove
 
@@ -99,5 +132,8 @@ describe('verifying - if login manually logout, else check url', () => {
         cy.writeFile('cypress/fixtures/output/inValidCredentials.json',
             "]", { flag: 'a+' })
 
-    })// it
+    })// it ==================================================================================
+
+
+
 })// describe
