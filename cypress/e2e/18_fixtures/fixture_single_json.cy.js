@@ -46,7 +46,7 @@ describe('verifying - if login manually logout, else check url', () => {
             })// forEach
         })// fixture
     })// it ==================================================================================
-    it('3. verify single correct credential and multiple wrong credentials', () => {
+    it.only('3. verify single correct credential and multiple wrong credentials', () => {
 
         Cypress.on('uncaught:exception', (err, runnable) => {
             return false
@@ -133,4 +133,7 @@ describe('verifying - if login manually logout, else check url', () => {
             "]", { flag: 'a+' })
 
     })// it ==================================================================================
+
 })// describe
+
+
