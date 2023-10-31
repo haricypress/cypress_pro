@@ -1,5 +1,5 @@
 
-function findLongestWord(str) {
+function findLongestWord_1(str) {
   var strSplit = str.split(' ')
   console.log(str, strSplit, strSplit.length)
   var longest_word = ''
@@ -11,10 +11,18 @@ function findLongestWord(str) {
       longest_word = strSplit[i]
     }
   }
-  return 'longest word : ' + longest_word + ' (' + longest_length + ')';
+
+  //  here "\n\n" used to print new lines
+  return 'longest word : ' + longest_word + ' (' + longest_length + ')'
+
 }
+
 
 stringValue = 'i am an indian'
 stringEmpty = ''
-console.log(findLongestWord(stringValue))
-console.log(findLongestWord(stringEmpty))
+
+
+console.log(findLongestWord_1(stringValue))
+console.log(findLongestWord_1(stringEmpty))
+
+// =================================================================================
