@@ -13,6 +13,10 @@ describe("loading test data from fixtures", () => {
         cy.fixture("testData/test").then(function (login_details) {
 
             this.data = login_details
+            for(let i = 0; i< this.data.length;i++){
+                cy.log(i)
+            }
+
             cy.log("beforeEach:", this.data)
 
         })
@@ -20,7 +24,6 @@ describe("loading test data from fixtures", () => {
     })
 
     it("1. test datad load from fixtured folder", function () {
-
 
 
         cy.writeFile("cypress/fixtures/testData/test.json",

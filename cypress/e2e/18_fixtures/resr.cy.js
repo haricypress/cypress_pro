@@ -26,9 +26,19 @@ describe('verifying - if login manually logout, else check url', () => {
         cy.get('button[type="submit"]').click()
 
         try {
-            if (cy.get('p.oxd-userdropdown-name').length() > 0)
+            if (response.status<400){
 
-                cy.log("pass")
+                     // if login
+                     cy.get('p.oxd-userdropdown-name').click()
+                     cy.get('a[role="menuitem"]').eq(3).click();
+                     cy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+                     cy.writeFile('cypress/fixtures/output/validCredentials.json',
+                         "{" +
+                         '"username" : ' + '"' + userdata.username + '",\n' +
+                         '"password" : ' + '"' + userdata.password + '"\n' + "},",
+                         { flag: 'a+' })
+                 }// if
+                 
             else
                 cy.log("fail")
         }
