@@ -45,5 +45,5 @@ command 1 : cypress/fixtures/testData/*
 
 to "push and pull",  "login.json" file only,
 remaining all sub files and folders will not, inside "testData" folder.
-command 2 : cypress/fixtures/testData/login.json
+command 2 : !cypress/fixtures/testData/login.json
 
