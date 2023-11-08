@@ -41,7 +41,7 @@ can't push and pull   means ignore
 
 to stop "push and pull" sub files and folders of "testData" folder,
 but can "push and pull",  "testData" folder name
-line 1 :    cypress/fixtures/testData/*
+line 1 :      cypress/fixtures/testData/*
 
 to "push and pull",  "login.json" file only,
 remaining all sub files and folders will not, inside "testData" folder.
