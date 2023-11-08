@@ -20,13 +20,14 @@ pull     -  transfer data from cloud space to local machine (means, cloud to loc
 2) 
 if ".gitignore" not working run below 3 commands :
 
-// to stop track all  files
+// to delete everyting from github
+//  warning :  don't change anything in local machine upto run 2nd command
 command 1 :    git rm -r --cached .
 
 // to add all files to github
 command 2 :    git add .
 
-just commit command with message
+// to commit with message
 command 3 :     git commit -m ".gitignore is now working"
 ==========================================================================
 
@@ -38,11 +39,9 @@ can't "push and pull"  means "ignore"
 
 // can't "push and pull" all sub files and folders of "testData" folder,
 // but can "push and pull",  "testData" folder name
-
 command 1 : cypress/fixtures/testData/*
 
 // can "push and pull",  "login.json" file,
-remaining all sub files and folders will not "push and pull", inside "testData" folder.
-
+// remaining all sub files and folders will not "push and pull", inside "testData" folder.
 command 2 : cypress/fixtures/testData/login.json
 
