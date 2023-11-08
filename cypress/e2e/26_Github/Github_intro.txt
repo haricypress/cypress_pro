@@ -1,5 +1,5 @@
 
-
+1)
 in raltime, coding in diff places and pushing into a cloud space like github,
 
 examples for cloud spaces : github, bitbucket, gitlab, AWS, azure/ other custom cloud places.
@@ -16,4 +16,30 @@ push     -  transfer data from local machine to cloud space (means, local to clo
 pull     -  transfer data from cloud space to local machine (means, cloud to local)
 
 =================================================================================================
+
+2) 
+if ".gitignore" not working follow below 3 commands :
+
+// to stop track all  files
+command 1 :    git rm -r --cached .
+
+// to add all files to github
+command 2 :    git add .
+
+just commit command with message
+command 3 :     git commit -m ".gitignore is now working"
+==========================================================================
+
+3)  to pull and push single file and ignore remaining in a folder  :
+
+
+can't "push and pull"  means "ignore"
+
+// can't "push and pull" all sub files and folders of "testData" folder,
+// but can "push and pull",  "testData" folder name
+command 1 : cypress/fixtures/testData/*
+
+// can "push and pull",  "login.json" file,
+remaining all sub files and folders will not "push and pull", inside "testData" folder.
+!cypress/fixtures/testData/login.json
 

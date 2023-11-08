@@ -181,7 +181,7 @@ describe("TS1", function () {
 // scenario 1 :  "before" declared as  "arrow" function
 
 describe("TS1", function () {
-    this.data = "a"
+
     before("before", ()=>{
         cy.log(this.data, typeof(this.data))
         this.data = "before"
@@ -202,6 +202,7 @@ describe("TS1", function () {
         this.data = 2
         cy.log(this.data)
     })
+    this.data = "a"
 })
 
 ..........................................................................................
@@ -210,7 +211,6 @@ describe("TS1", function () {
 // scenario 2 :  "before" declared with  "function" keyword
 
 describe("TS1", function () {
-    this.data = "a"
     before("before", function ()  {
         cy.log(this.data, typeof(this.data))
         this.data = "before"
@@ -231,6 +231,7 @@ describe("TS1", function () {
         this.data = 2
         cy.log(this.data)
     })
+    this.data = "a"
 })
 
 // ===================================================================
@@ -240,7 +241,7 @@ describe("TS1", function () {
 // scenario 1 :  "beforeEach" declared as  "arrow" function
 
 describe("TS1", function () {
-    this.data = "a"
+
     beforeEach("beforeEach", ()=>{
         cy.log(this.data, typeof(this.data))
         this.data = "beforeEach"
@@ -261,6 +262,7 @@ describe("TS1", function () {
         this.data = 2
         cy.log(this.data)
     })
+    this.data = "a"
 })
 
 ..........................................................................................
@@ -289,6 +291,7 @@ describe("TS1", function () {
         this.data = 2
         cy.log(this.data)
     })
+    this.data = "a"
 })
 
 // ===================================================================
