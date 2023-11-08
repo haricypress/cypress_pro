@@ -30,16 +30,19 @@ just commit command with message
 command 3 :     git commit -m ".gitignore is now working"
 ==========================================================================
 
-3)  to pull and push single file and ignore remaining in a folder  :
+3)  to pull and push single file and ignore remaining all in a folder  :
 
+follow below 2 commands,
 
 can't "push and pull"  means "ignore"
 
 // can't "push and pull" all sub files and folders of "testData" folder,
 // but can "push and pull",  "testData" folder name
+
 command 1 : cypress/fixtures/testData/*
 
 // can "push and pull",  "login.json" file,
 remaining all sub files and folders will not "push and pull", inside "testData" folder.
-!cypress/fixtures/testData/login.json
+
+command 2 : cypress/fixtures/testData/login.json
 
