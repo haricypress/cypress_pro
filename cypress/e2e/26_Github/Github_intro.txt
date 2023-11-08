@@ -18,7 +18,7 @@ pull     -  transfer data from cloud space to local machine (means, cloud to loc
 =================================================================================================
 
 2) 
-if ".gitignore" not working follow below 3 commands :
+if ".gitignore" not working run below 3 commands :
 
 // to stop track all  files
 command 1 :    git rm -r --cached .
@@ -32,7 +32,7 @@ command 3 :     git commit -m ".gitignore is now working"
 
 3)  to pull and push single file and ignore remaining all in a folder  :
 
-follow below 2 commands,
+run below 2 commands,
 
 can't "push and pull"  means "ignore"
 
