@@ -38,13 +38,13 @@ command 3 :     git commit -m ".gitignore is now working"
 
 run below 2 commands,
 
-can't "push and pull"  means "ignore"
+"can't push and pull"   means ignore
 
-can't "push and pull" all sub files and folders of "testData" folder,
+to stop "push and pull" sub files and folders of "testData" folder,
 but can "push and pull",  "testData" folder name
 command 1 : cypress/fixtures/testData/*
 
-can "push and pull",  "login.json" file,
-remaining all sub files and folders will not "push and pull", inside "testData" folder.
+to "push and pull",  "login.json" file only,
+remaining all sub files and folders will not, inside "testData" folder.
 command 2 : cypress/fixtures/testData/login.json
 
