@@ -1,102 +1,70 @@
 
-first time BDD configuration  :
-===============================
+first time BDD configuration  :  (1 time configuration)
+=========================================
 
 1)  run CMD command    :   npm install --save-dev cypress-cucumber-preprocessor
 
-
-
-
-2)  add below lines at "cypress/plugins/index.js" ( create folder and file manually )
-
+2)  add below lines at "cypress/plugins/index.js" ( create manually )
 
 const cucumber = require('cypress-cucumber-preprocessor').default
-
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 }
 
+3) add below line under   " setupNodeEvents(on, config) {"        at       "cypress.config.js" file :
 
+      return require('./cypress/plugins/index.js')(on, config)
+	  
+4) add below line  under   "e2e :{"         at      "cypress.config.js"   ( to show only ".feature" files )
 
-
-3) add below line at "cypress/config.js"   under   "e2e :{"
- 
   "specPattern": "**/*.feature",
 
-
-
-
-4) paste below lines in package.json   :
-
+5) paste below lines in package.json   :
 
 ,  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
-
 } ( Note : this is last line in file )
 
-
-
-
-
-5) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.js"  file
-
-
+6) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.js"  file
   search for    :   confStepDefinitions || `cypress${path.sep}integration`;
-
   change to     :   confStepDefinitions || `cypress${path.sep}e2e`;
 
-
-6) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.test.js"  file
-
-
+7) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.test.js"  file
 search for    :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}integration`;
-
 change to     :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}e2e`;
-
-
-
 =============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 in ".feature" file : 
 ====================
-
 Feature     is like describe in "cy.js" file
 scenario    is like it() in "cy.js" file
-Given       is like method name in "cy.js" file
-
-
+Given       is like command  in "cy.js" file
 =============================================================================================
-
 step implementation files must be inside "e2e"
 in realtime, put all step implementation files in "common" named folder, inside "e2e" folder
-place "common" folder under "e2e" folder
-all ".feature" files are searching for step implementations in ".js" files,
+all ".feature" files are searching for step implementations in all  ".js" files,
 first in same named folder, next in "e2e/common" folder
-searching file names by alphabatic order.
-
 =============================================================================================
-
-Background:
+Background (Gherkin keyword) :
  working as Background to all, like BeforeEach()
-
 =============================================================================================
-
-Scenario Outline :
-
+Scenario Outline (Gherkin keyword) :
 using for Data Driven Testing
 Recommonded upto 10 or 20 input values
 for more values like 50 or 100 or 10,000 or 1,00,000 use "for" loop
-
-=============================================================================================
-
-
-in BDD,
-all ".feature" files are searching in ".js" files for step implementations 
-by file names alphabatic order.
-
-if there is no step implementations in any ".js" file then Error will raise.
-
 =============================================================================================
 
