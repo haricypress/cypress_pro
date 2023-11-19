@@ -1,17 +1,17 @@
 
-first time BDD configuration  :  (1 time configuration)
-=========================================
+BDD framework install  :  (1 time configuration, need internet)
+================================================
 
 1)  run CMD command    :   npm install --save-dev cypress-cucumber-preprocessor
 
-2)  add below lines at "cypress/plugins/index.js" ( create manually )
+2)  add below lines at "root_folder/cypress/plugins/index.js" ( create manually )
 
 const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 }
 
-3) add below line under   " setupNodeEvents(on, config) {"        at       "cypress.config.js" file :
+3) add below line at       "cypress.config.js" file     under   " setupNodeEvents(on, config) {"         :
 
       return require('./cypress/plugins/index.js')(on, config)
 	  
