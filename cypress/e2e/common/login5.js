@@ -12,4 +12,14 @@ And("Enter Valid Password {string}", (password) =>{
 
 
 
+Then("assert after login valid or invalid credentials", () => {
+    cy.url().then((url) => {
+        cy.log(url)
 
+        if (url == 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
+            cy.contains("Dashboard").should("be.visible")
+        else
+            cy.contains('Invalid credentials').should("be.visible")
+    })
+
+})

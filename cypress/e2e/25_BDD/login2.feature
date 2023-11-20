@@ -9,5 +9,5 @@ Feature: verifying login
         When Enter Valid Username
         And Enter Valid Password
         And Click On Submit Button
-        Then assert after login
+        Then assert after login success
         

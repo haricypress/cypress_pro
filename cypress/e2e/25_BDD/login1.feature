@@ -7,4 +7,7 @@ Feature: verifying login
 
         Given open web page
         When Enter Valid credentials
-        Then assert after login
+        Then assert after login success
+        But message after login
+
+

@@ -10,11 +10,11 @@ Feature: verifying @focus
     Scenario: verifying login with valid credentials
 
         When Enter Valid credentials
-        Then assert after login
+        Then assert after login success
 @focus
     Scenario: verifying login with valid credentials using And keyword
 
         When Enter Valid Username
         And Enter Valid Password
         And Click On Submit Button
-        Then assert after login
+        Then assert after login success
