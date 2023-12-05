@@ -9,7 +9,7 @@ module.exports = defineConfig({
   },
 
   e2e: {
-    // "specPattern":"**/*.{cy.{js,jxs},feature}",
+    // "specPattern":"**/*.{cy.{js,jxs},feature}",     
     // "specPattern":"**/*.cy.js",
     "specPattern":"**/*.feature",
     // "specPattern": "**/*.{cy.js,feature}",
