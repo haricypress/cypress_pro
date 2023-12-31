@@ -1,10 +1,11 @@
 
 describe("each() cypress command understanding", () => {
     beforeEach("", () => {
-        cy.visit("cypress/htmlFiles/htmlFiles.html")
+        cy.visit("cypress/htmlFiles/htmlFile.html")
+        
 
         /*
-    <ul>
+  <ul class = "all fruits">these are
       <li class="fruit">Apples $10</li>
       <li class="fruit">Bananas $20</li>
       <li class="fruit">Grapes $15</li>

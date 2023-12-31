@@ -1,5 +1,3 @@
-///<reference types="cypress"/>
-
 describe('Automation - Working With Drag and Drop', function () {
   
   Cypress.on("uncaught:exception", () => {
@@ -11,7 +9,7 @@ describe('Automation - Working With Drag and Drop', function () {
   beforeEach('visiting web site',() =>{
     cy.visit('https://kitchen.applitools.com/ingredients/drag-and-drop');
 
-    cy.wait(3000)  // for slow internet - waiting 3 sec
+    // cy.wait(3000)  // for slow internet - waiting 3 sec
 
 })//==================================================================================
 

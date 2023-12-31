@@ -297,14 +297,15 @@ describe("TS1", function () {
 
 // ===================================================================
 //====================================
-//  )     "puase()" is using to debug within test-case.
+//  )     "puase()" is using to debug script within test-case.
 // it can use as chainnned command like "cy.log(this.data).pause()"     and       "cy.pause()"
 // to resume testing,  press "c" keyword or click on "resume button" on "test runner".
+// "pause" not work in run mode.
 
 describe("TS1", () => {
 
     beforeEach("before", function () {
-        cy.log(this.data, typeof (this.data))
+        cy.log(this.data, typeof (this.data)).pause()
         this.data = 1
         cy.log(this.data)
      
@@ -313,7 +314,7 @@ describe("TS1", () => {
     it("TC1", function () {
         cy.log(this.data)
         this.data = 2
-        cy.log(this.data)
+        cy.log(this.data).pause()
     })
 
     it("TC2", function () {

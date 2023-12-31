@@ -45,7 +45,9 @@ command to install   :  npm install -D cypress-xpath
 add      require('cypress-xpath');      statement in       "project_folder\cypress\support\e2e.js"     file
 
 ===========================================================================================
-4)
+
+4) from command prompt:
+
 to run cypress test cases in "test runner"  ( in front-end )               :  npx cypress open 
 to run all cypress test cases in "run mode"  ( in background )             :  npx cypress run 
 
@@ -56,7 +58,7 @@ to run specific single script in front-end "run mode"  , like "test runner"   :
 npx cypress run --headed --spec 'cypress\e2e\16_CSSBasics\CSS_basics.cy.js'
 
 ===========================================================================================
-5)
+5)from command prompt:
 to run specific multiple scripts in "run mode" ( in background ) :
 syntax 1 : npx cypress run --spec 'script1 relative path','script2 relative path','script3 relative path'
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
@@ -70,7 +72,7 @@ to run all test script which are under a folder :
 syntax 3 : npx cypress run --headed --spec "path upto required folder"
 npx cypress run --headed --spec "cypress\e2e\16_xpath"
 ============================================================================================
-6)
+6)from command prompt:
 to run specific multiple scripts in "run mode" ( in front-end, like test runner ) :
 
 syntax 1 : npx cypress run --headed --spec 'script1 relative path','script2 relative path','script3 relative path'
@@ -82,7 +84,7 @@ example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\
 
 
 ============================================================================================
-7)
+7)from command prompt:
 to run all scripts in a folder (can run even outside of "e2e" folder also, if path is correct) :
 
 syntax :  npx cypress run --headed --spec cypress/e2e/sub_folder_name/*.cy.js
@@ -180,28 +182,43 @@ Note : coding / scripts never effect
 to pass data within "test suite"  from one "test case" to another "test case" use global variable ( i.e., var ).
 
 ==========================================================================================
-14)
-on "test runner" to display files on specific "extensions" : 
+14) specPattern :
+
+to execute specific scripts in run mode or
+to display files on specific "extensions" on "test runner" : 
 
 "specPattern"  is key
 
-goto  "cypress.config.js" and add statement like below, if multiple statemenmets used, last statement affected.
+goto  "cypress.config.js" and add statement like below,
 
 mention extensions which you want execute in "test runner".
 
-e2e: {
-     
-    // "specPattern":"**/*.cy.js",               // to display only "cy.js" files
+// method 1: using single statement  
+
+note : if multiple statements used, last statement will effect.
+
+e2e: {  
+  // "specPattern":"**/*.cy.js",               // to display only "cy.js" files
     // "specPattern":"**/*.feature",             // to display only ".feature" files
            "specPattern": "**/*.{cy.js,feature}",    // to display only "cy.js" and ".feature" files
    // "specPattern":"**/*.{cy.{js,jxs},feature}",  // to display "cy.js", "cy.jxs", ".feature" files
-	
+  
 
 example, to show "cy.js" and ".feature" files only in "test runner", add like below
 
 e2e: {
            "specPattern": "**/*.{cy.js,feature}",
 		   
+// method 2 :using multiple statement    
+// note :  all statements will effect.
+
+e2e: {
+  "specPattern": [
+      "cypress/e2e/pause1.cy.js", // to select "pause1.cy.js" script only from "e2e" folder
+      "cypress/e2e/*.cy.js", // to select all "cy.js" scripts from e2e folder
+      "cypress/*.cy.js"   // to select all "cy.js" scripts from "cypress" folder
+    ],
+		
 ==========================================================================================
 15)
 command to use another config file in test runner :

@@ -2,4 +2,4 @@
 
 to run javasript file in "cypress" CMD :
 
-node "js file repative path"  (withput quotes)
+node "js file relative path"  (without quotes)
