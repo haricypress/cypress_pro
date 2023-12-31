@@ -1,3 +1,4 @@
+0)
 npx cypress run --headed --spec "cypress\e2e\16_xpath" 
 
 
@@ -58,7 +59,8 @@ to run specific single script in front-end "run mode"  , like "test runner"   :
 npx cypress run --headed --spec 'cypress\e2e\16_CSSBasics\CSS_basics.cy.js'
 
 ===========================================================================================
-5)from command prompt:
+5)
+from command prompt:
 to run specific multiple scripts in "run mode" ( in background ) :
 syntax 1 : npx cypress run --spec 'script1 relative path','script2 relative path','script3 relative path'
 npx cypress run --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js', 'cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'
@@ -71,7 +73,8 @@ to run all test script which are under a folder :
 
 syntax 3 : npx cypress run --headed --spec "path upto required folder"
 npx cypress run --headed --spec "cypress\e2e\16_xpath"
-============================================================================================
+===========================================================================================
+
 6)from command prompt:
 to run specific multiple scripts in "run mode" ( in front-end, like test runner ) :
 
@@ -83,7 +86,8 @@ example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\
 example : npx cypress run --headed --spec 'cypress\e2e\15_16_page_object_models\addJobTitle.cy.js, cypress\e2e\15_16_page_object_models\emplymentStatus.cy.js'   
 
 
-============================================================================================
+===========================================================================================
+
 7)from command prompt:
 to run all scripts in a folder (can run even outside of "e2e" folder also, if path is correct) :
 
@@ -95,28 +99,15 @@ example : npx cypress run --headed --spec cypress/e2e/16_xpath/*.cy.js
         cypress, e2e, 16_xpath are folder names
 
 
-============================================================================================
+===========================================================================================
+
 8)
 to stop running scripts:
 press    ctrl+c   in CMD promt
 
-============================================================================================
-9)
-git error   :   failed to push some refs to remote
-solution :  online git reposiroty replacing by local project (push command) 
-           
-run below  command in "CMD" at cypress project folder
-            
-			project address in local PC   :   D:\cypress_pro\cypress
-            in  CMD  promt location         :  D:\cypress_pro\cypress>
-            
-			CMD prompt    :     git push -f origin main
-            
-to replace local project by online git reposiroty (pull command ) 
-CMD prompt   :     git pull -f origin main
+===========================================================================================
 
-==========================================================================================
-10)
+9)
 allure reports :
 *********
 to install allure reports (run this command in CMD prompt at project folder) :  npm i -D @shelex/cypress-allure-plugin
@@ -152,23 +143,7 @@ to generate new report : allure generate
 to open generated report : allure open
 
 ==========================================================================================
-11)
-command line to push first time from local pc to github repository  :
-
-echo "# cypress_practice" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/haricypress/cypress_practice.git
-git push -u origin main
-
-here,
-haricypress                  -   github account name
-cypress_practice     -   repository name
-
-==========================================================================================
-12)
+10)
 if cypress not work on any browser, follow below :
 CMD command  : npx cypress open
 in browser,   Goto File -> View App Data
@@ -178,11 +153,11 @@ Close cypress, open again
 Note : coding / scripts never effect
 
 ==========================================================================================
-13)
+11)
 to pass data within "test suite"  from one "test case" to another "test case" use global variable ( i.e., var ).
 
 ==========================================================================================
-14) specPattern :
+12) specPattern :
 
 to execute specific scripts in run mode or
 to display files on specific "extensions" on "test runner" : 
@@ -209,7 +184,7 @@ example, to show "cy.js" and ".feature" files only in "test runner", add like be
 e2e: {
            "specPattern": "**/*.{cy.js,feature}",
 		   
-// method 2 :using multiple statement    
+// method 2 : using multiple statement    
 // note :  all statements will effect.
 
 e2e: {
@@ -220,84 +195,10 @@ e2e: {
     ],
 		
 ==========================================================================================
-15)
+13)
 command to use another config file in test runner :
 npx cypress open --config-file 'cypress.config1.js'
 
 here, "cypress.config1.js" is another cypress config file, not default config file
 ==========================================================================================
-16)
-
-git clone https://github.com/haricypress/cypress_pro.git
-
-
-CMD command to verify remote : 
-git remote -v
-
-output:
-origin  https://github.com/haricypress/cypress_pro.git (fetch)
-origin  https://github.com/haricypress/cypress_pro.git (push)
-
-==========================================================================================
-17)
-
-to add existing local repository to cloude github,
-
-run below commands in CMD ( at project folder localtion) :
-
-1) git init
-2) git remote add origin https://github.com/haricypress/cypress_pro.git
-
-
-if repository in "master" then  to change from "master" to "main" ( CMD commands)  :
-.
-
-
-
-case 1 : 
-======
-
-CMD commands : 
-
-1) git branch --move master main
-2) git push origin main  ( pushing / uploading  normally)
-							or
-	    git push -f origin main  ( pushing / uploading  forcely)
-
-
-case 2 : 
-======
-sometimes first "pull"mandatory, next "push" allowed.
-so, backup scripts / support file / important files, then run below commands,
-
-CMD commands : 
-
-1) git branch --move master main     ( if repository already moved to "main" then it is optional)
-2) git push origin main  /  git push -f origin main  ( run any one command)
-3) git pull origin main (next run 2nd command)
-
-
-case 3 :
-======
-
-have any problem to move "master" to "main"
-
-1) delete git hidden  folder for your cypress project
-2) git init
-3) git branch --move master main
-
-
-==========================================================================================
-18)
-
-CMD command to Verify remote :
-git remote -v
-
-example output:
-origin  https://github.com/haricypress/cypress_pro.git (fetch)
-origin  https://github.com/haricypress/cypress_pro.git (push)
-
-==========================================================================================
-19)
-
 
