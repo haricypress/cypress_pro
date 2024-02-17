@@ -10,7 +10,7 @@ for of :  works with arrays, looping elements of array
 
 // ======================================================================================================
 
-// for in - looping
+// for in :  works with objects, looping properties of object
 
 // student is an object type variable, "for-in" used to loop properties of an object
 
@@ -60,7 +60,7 @@ for of :  works with arrays, looping elements of array
 
 // ======================================================================================================
 
-// // for of - looping
+// // for of :  works with arrays, looping elements of array
 
 // array_1 = [1, 'hari', 4, 5.1, 6.0, 'kishore', true, false,]
 // console.log('before sort :',array_1)

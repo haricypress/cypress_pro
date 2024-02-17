@@ -66,6 +66,10 @@ CMD prompt   :     git pull -f origin main
 5)
 command line to push first time from local pc to github repository  :
 
+====================================
+create a new repository on the command line :
+====================================
+
 echo "# cypress_practice" >> README.md
 git init
 git add README.md
@@ -77,6 +81,13 @@ git push -u origin main
 here,
 haricypress                  -   github account name
 cypress_practice     -   repository name
+
+=========================================
+push an existing repository from the command line :
+=========================================
+git remote add origin https://github.com/haricypress/https-github.com-haricypress-cypress_by_folder_structure.git
+git branch -M main
+git push -u origin main
 
 ==========================================================================================
 6)
