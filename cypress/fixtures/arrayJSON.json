@@ -2,19 +2,22 @@
     {
         "userName": "kishore",
         "EmailAddr": "kishore@gmail.com",
-        "weakpassword": "dsdsd",
         "strongPassword": "xfsgfxvxffxgvcx"
     },
     {
-        "userName": "kishore",
+        "userName": "hari",
         "EmailAddr": "kishore@gmail.com",
-        "weakpassword": "dsdsd",
         "strongPassword": "xfsgfxvxffxgvcx"
     },
     {
-        "userName": "kishore",
+        "userName": "krishna",
         "EmailAddr": "kishore@gmail.com",
-        "weakpassword": "dsdsd",
+        "strongPassword": "xfsgfxvxffxgvcx"
+    }
+    ,
+    {
+        "userName": "krishna",
+        "EmailAddr": "kishore@gmail.com",
         "strongPassword": "xfsgfxvxffxgvcx"
     }
 ]
