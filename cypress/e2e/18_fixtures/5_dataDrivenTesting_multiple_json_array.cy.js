@@ -1,48 +1,46 @@
 
-const fixturefiles = [
+const fixtureVariable = [
 
+    {
+        "name": "testData1",
+        'context': 'ramudu'
+    },
     {
         "name": "testData2",
-        "fileName": "testData2"
-    },
-
-    {
-        "name": "testData3",
-        "fileName": "testData3"
+        'context': 'krishnudu'
     }
 ]
 
+//=================================================================================
 
-describe("data driven testing", () => {
+describe("load test data from multiple files demo", function () {
 
-    fixturefiles.forEach((vfixture) => {
+    fixtureVariable.forEach((vFixture) => {
+      
+        describe(vFixture.context, () => {
+            before(function () {  // hook  -  "before()"
 
-
-        describe(vfixture.fileName, () => {
-
-
-            before(function () {
-
-                cy.fixture(vfixture.name).then(function (data) {
+                cy.fixture(vFixture.name).then(function (data) {
                     this.data = data
-
                 })
             })
 
+            it("verify already registered user try to register again", function () {
 
-            it("verify already registered user, try to register again", function () {
 
                 cy.visit("https://shop.demoqa.com/my-account/")
-
-                cy.get("#reg_username").type(i.userName)
-                cy.get("#reg_email").type(i.EmailAddr)
-                cy.get("#reg_password").type(i.strongPassword)
+                cy.get("#reg_username").type(this.data.userName)
+         
+                cy.get("#reg_email").type(this.data.EmailAddr)
+                 
+                cy.get("#reg_password").type(this.data.strongPassword)
                 cy.get('button[name="register"]').click()
 
-                cy.get("#username").should("have.value", i.userName)
+
+                cy.get("#username").should("have.value", this.data.userName)
+
 
             })
         })
     })
-
 })
