@@ -1,13 +1,20 @@
 
+
+/*
+ Scenario  : 
+                loading array kind test data from multiple JSON files from fixtures
+*/
+
 const fixtureVariable = [
 
     {
         "name": "arrayJSON1",
         'context': 'arrayJSON1'
     },
+    
     {
-        "name": "testData1",
-        'context': 'testData1'
+        "name": "arrayJSON2",
+        'context': 'arrayJSON2'
     }
 ]
 

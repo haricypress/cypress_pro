@@ -1,27 +1,39 @@
 
-const fixtureVariable = [
+
+/*
+
+                    not completed
+ Scenario  : 
+                loading test data from multiple JSON files,
+                array and non-array test data from fixtures
+*/
+
+const arrayJSON = [
 
     {
         "name": "arrayJSON1",
         'context': 'arrayJSON1'
     },
-    
+]
+
+const JSON = [
+
     {
-        "name": "arrayJSON2",
-        'context': 'arrayJSON2'
+        "name": "testData1",
+        'context': 'testData1'
     }
 ]
 
 //=================================================================================
 
-describe("load test data from multiple files demo", function () {
+describe("verify Load test data from multiple JSON files with array", function () {
 
-    fixtureVariable.forEach((vFixture) => {
+    fixtureVariable.forEach((arrayJSON) => {
 
-        describe(vFixture.context, () => {
+        describe(arrayJSON.context, () => {
             before(function () {  // hook  -  "before()"
 
-                cy.fixture(vFixture.name).then(function (data) {
+                cy.fixture(arrayJSON.name).then(function (data) {
                     this.data = data
                 })
             })

@@ -1,31 +1,34 @@
 
+
+/*
+ Scenario  : 
+                loading test data from multiple JSON files from fixtures
+*/
+
+
 const fixtureVariable = [
 
     {
         "name": "register/details",   // path name
-        'context': 'hari' //  dispaly on test runner
+        'context': 'sub folder' //  dispaly on test runner
     },
     {
         "name": "shop.demoqa",
-        'context': 'kishore'
+        'context': 'shop'
     },
-    // {
-    //     "name": "randomEmail",
-    //     'context': 'ramdonEmail'
-    // },
     {
         "name": "testData1",
         'context': 'ramudu'
     },
     {
         "name": "testData2",
-        'context': 'krishnudu'
+        'context': 'testData2'
     }
 ]
 
 //=================================================================================
 
-describe("load test data from multiple files demo", function () {
+describe("verify load test data from multiple JOSN files as object", function () {
 
     fixtureVariable.forEach((vFixture) => {
       
@@ -42,21 +45,14 @@ describe("load test data from multiple files demo", function () {
 
                 cy.visit("https://shop.demoqa.com/my-account/")
                 cy.get("#reg_username").type(this.data.userName)
-                // if ((this.data.EmailAddr).contains("@")) {
-                cy.get("#reg_email").type(this.data.EmailAddr)
-                // }
-                // else {
-                // let r = (Math.random() + 1).toString(37).substring(7)
-                //     cy.get("#reg_email").type(this.data.EmailAddr+ r + '@gmail.com')
-                // }   
+
+                cy.get("#reg_email").type(this.data.EmailAddr)  
                 cy.get("#reg_password").type(this.data.strongPassword)
                 cy.get('button[name="register"]').click()
 
 
-                // cy.get("#username").should("have.attr", 'value', testData.userName)
-                // or
-                cy.get("#username").should("have.value", this.data.userName)
-
+                cy.get("#username").should("have.attr", 'value', testData.userName)
+              
 
             })
         })
