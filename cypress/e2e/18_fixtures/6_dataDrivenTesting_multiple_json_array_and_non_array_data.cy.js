@@ -5,10 +5,9 @@ const fixtureVariable = [
         "name": "arrayJSON1",
         'context': 'arrayJSON1'
     },
-    
     {
-        "name": "arrayJSON2",
-        'context': 'arrayJSON2'
+        "name": "testData1",
+        'context': 'testData1'
     }
 ]
 
