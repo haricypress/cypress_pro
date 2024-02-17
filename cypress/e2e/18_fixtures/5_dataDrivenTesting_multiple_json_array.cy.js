@@ -2,12 +2,12 @@
 const fixtureVariable = [
 
     {
-        "name": "testData1",
-        'context': 'ramudu'
+        "name": "testData2",
+        'context': 'testData2'
     },
     {
-        "name": "testData2",
-        'context': 'krishnudu'
+        "name": "testData3",
+        'context': 'testData3'
     }
 ]
 
