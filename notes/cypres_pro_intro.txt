@@ -24,7 +24,8 @@ command 2 : npm install cypress
 
 optional  : to remove or add pluggins based on "package.json" file
 command   :  npm install 
-"package.json"  file is showing all installed packages
+
+note : "package.json"  file is showing all installed packages
 
 =========================================================================================
 2)
@@ -36,7 +37,8 @@ command 1 (to clear all previously installed cypress)  :  npx cypress cache clea
 command 2  (to install latest cypress version ) :  npx cypress install
 
 optional : 
-command 3 (to re-initiate cypress)      :     npm init
+command 3      :     npm init ( to re-initiate cypress)
+command 4		:		npm install   ( to install based on "package.json" file)
 
 ===========================================================================================
 3)

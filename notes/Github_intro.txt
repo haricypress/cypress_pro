@@ -3,9 +3,9 @@
 in raltime, coding in diff places and pushing into a cloud space like github,
 
 examples for cloud spaces : github, bitbucket, gitlab, AWS, azure/ other custom cloud places.
-these are calling as "source management tools".
+calling as "source management tools".
 to push and pull between local and  cloud places a technology is using , i.e., version control system.
-in old days "SVN" used, compare with "SVN", "Git" is fast and convienent.
+in old days "SVN" version control system used, compare with "SVN", "Git" is fast and convienent.
 so, now days "Git" is using.
 
 Git and Github both are diff.
@@ -20,14 +20,14 @@ pull     -  transfer data from cloud space to local machine (means, cloud to loc
 2) if ".gitignore" not working, run below 3 commands :
 
 
-warning :  backup project before run first command, just in case
-don't change anything in local machine upto run 2nd command
+warning :  backup project before run first command, just in case.
+don't change anything in local machine upto run 2nd command.
 
 to delete everyting from github
 command 1 :    git rm -r --cached .
 
 to add all files to github
-command 2 :    git add .
+command 2 :    git add .  (must mention with space after add, i.e., "  .") 
 
 to commit with message
 command 3 :     git commit -m ".gitignore is now working"
@@ -40,7 +40,7 @@ add below 2 lines in ".gitignore" file
 can't push and pull   means ignore
 
 to stop "push and pull" sub files and folders of "testData" folder,
-but can "push and pull",  "testData" folder name
+but can "push and pull",  "testData" named folder,
 line 1 :      cypress/fixtures/testData/*
 
 to "push and pull",  "login.json" file only,
@@ -50,7 +50,7 @@ line 2 :      !cypress/fixtures/testData/login.json
 ==========================================================================
 4)
 git error   :   failed to push some refs to remote
-solution :  online git reposiroty replacing by local project (push command) 
+solution :  to replace online git reposiroty with local project (push command) 
            
 run below  command in "CMD" at cypress project folder
             
@@ -59,7 +59,7 @@ run below  command in "CMD" at cypress project folder
             
 			CMD prompt    :     git push -f origin main
             
-to replace local project by online git reposiroty (pull command ) 
+to replace local project with online git reposiroty (pull command ) 
 CMD prompt   :     git pull -f origin main
 
 ==========================================================================================
@@ -91,15 +91,10 @@ git push -u origin main
 
 ==========================================================================================
 6)
+
+to copy repository from git to local machine
+
 git clone https://github.com/haricypress/cypress_pro.git
-
-
-CMD command to verify remote : 
-git remote -v
-
-output:
-origin  https://github.com/haricypress/cypress_pro.git (fetch)
-origin  https://github.com/haricypress/cypress_pro.git (push)
 
 ==========================================================================================
 7)
@@ -112,11 +107,8 @@ run below commands in CMD ( at project folder localtion) :
 2) git remote add origin https://github.com/haricypress/cypress_pro.git
 
 
-if repository in "master" then  to change from "master" to "main" ( CMD commands)  :
+if repository is in "master" then  to change to "main" ( CMD commands)  :
 .
-
-
-
 case 1 : 
 ======
 

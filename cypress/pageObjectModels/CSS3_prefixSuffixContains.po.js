@@ -24,15 +24,15 @@ class CSSPrefixSuffix {
         example  :    id $=name
 
         */
-        
+
 
         return cy.get('input[name$=word]').type('cypress')
     }
 
     contains() {
         // syntax  : attribute_name*=value
-
-        return cy.get('input[name*="wor"]')
+      
+        return cy.get('input[name*="wor"]').clear().type("cypress")
     }
 }
 const ObjCSSPrefixSuffix = new CSSPrefixSuffix()

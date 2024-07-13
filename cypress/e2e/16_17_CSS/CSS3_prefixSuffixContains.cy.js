@@ -1,4 +1,4 @@
-import objCSSPrefixSuffix from "../../pageObjectModels/prefixSuffixContainsCSS.po"
+import objCSSPrefixSuffix from "../../pageObjectModels/CSS3_prefixSuffixContains.po"
 
 describe('rediff', () => {
 
@@ -6,6 +6,7 @@ describe('rediff', () => {
     objCSSPrefixSuffix.url()
     objCSSPrefixSuffix.prefix()
     objCSSPrefixSuffix.suffix()
+    cy.wait(5000)
     objCSSPrefixSuffix.contains()
 
   })

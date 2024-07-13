@@ -3,7 +3,7 @@
 use "import" statement, if test data want use in entire script file (with or without multiple test-suites).
 example : fixtures_01.cy
 
-2) cloading test data with cy.fixture() :
+2) loading test data with cy.fixture() :
 use "cy.fixture()"  within test-case, if test data want use within single test-case only.
 example : fixtures_02.cy
 

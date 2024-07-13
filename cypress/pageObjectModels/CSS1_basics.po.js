@@ -2,7 +2,7 @@
 class CSSBasics {
 
     url() {
-        cy.visit('https://shop.demoqa.com/my-account/')
+        cy.visit('https://register.rediff.com/register/register.php')
     }
     url2() {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -13,46 +13,18 @@ class CSSBasics {
     // 1) basic syntax - CSS
     CSSbasicSyntax() {
         // "input - tag name,  id - attibute name, reg_username   - "id" value"
-        return cy.get('input[id="reg_username"]').clear().type("cypress")
+        return cy.get('input[name="username"]').clear().type("cypress")
 
     }
-    //=============================================================================================================
-    // 2) text search is not available in CSS, "contains()" using, it is cypress command
-    //    works for full and partial text
 
-    CSSText() {
-        // not possible in CSS, contains() - cypress method, using for this
-        return cy.contains("Username")
-
-    }
     //=============================================================================================================
 
     andLogic() {
         // 3) username and password text boxes
-        return cy.get('input[name="username"][id="reg_username"]').type('Admin')
+        return cy.get('input[type="text"][maxlength="100"]').type('Admin')
     }
     //=============================================================================================================
 
-    IDAttribute() {
-        // 4) #ID_name atribute using to find element
-        return cy.get('input[id="reg_username"]').type('cypress')
-    }
-
-    singleClassValuedAttribue() {
-
-        // 5) .class using, if any element has class tag in node
-        return cy.get('.height-fixed')
-    }
-
-    multipleClassValuedAttribute() {
-        // 6) .classvalue1.clasvalue2.classvalue3, if any element has multiple values in "class" attribute
-
-        // Note: search in DOM can find string, selector and xpath,
-        //       if search for "class" , it will search "class" in attribue as well as in string, selector, xpath
-
-        return cy.get(".navbar.navbar-default")
-
-    }
     parentTochild() {
         // syntax  :  parent_node  > child_node > sub_child_node  (or) tag_name
         return cy.get('div[class="oxd-form-row"] > div>div>input').first().type('admin')
