@@ -1,0 +1,15 @@
+
+
+to run javasript file in VS code:
+
+open terminal (CTRL +j)
+
+node "relative path of js file"  (with/without quotes)
+
+example :
+
+							node JavaScript\string\charactersCount.js
+
+																			or
+
+							node "JavaScript\string\charactersCount.js"

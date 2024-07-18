@@ -75,13 +75,11 @@ comment line -4 */
 // // 5) value changing ( new value asigning ) ways
 
 // name1 = 'name1' // value asigning
-// console.log(name1) // value printing
 
 // console.log(name1 = 'name1 value changing')  // value changing ( new value asigning ) and printing
 
 // name1  = 'name1 value changing again' // value changing ( new value asigning )
 // console.log(name1)  // value printing
-
 
 
 // ==========================================================================================================
@@ -91,7 +89,7 @@ comment line -4 */
 // name_a = 'var name_a'
 // console.log('1 :', name_a)
 // if (true) {
-//     name_a = 'var name_a changing - if-block'  
+//     name_a = 'var name_a changing inside if-block'  
 //     console.log('2 :', name_a)
 // }
 // console.log('3 :', name_a)
@@ -101,8 +99,8 @@ comment line -4 */
 
 // output:
 // 1 : var name_a
-// 2 : var name_a changing - if-block
-// 3 : var name_a changing - if-block
+// 2 : var name_a changing inside if-block
+// 3 : var name_a changing inside if-block
 // 4 : var name_a changing outside 
 
 
