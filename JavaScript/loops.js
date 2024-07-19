@@ -21,19 +21,19 @@ for of :  works with arrays, looping elements of array
 //     }
 
 // console.log('----------------1st loop started----------------')
-    
-// for(let i in student){  //  "let" used for using in this block only
-//         console.log('----loop 1 starts')
-//         console.log(i)
-//         console.log('----loop 1 ends')
-//     }
-//     console.log('----------------1st loop ended----------------')
 
-//     for(let i in student){
-//         console.log('----loop 2 starts----')
-//         console.log(i + ' : ' + student[i])
-//         console.log('----loop 2 ends------')
-//     }
+// for (let i in student) {  //  "let" using within this block only
+//     console.log('----loop 1 starts')
+//     console.log(i)
+//     console.log('----loop 1 ends')
+// }
+// console.log('----------------1st loop ended----------------')
+
+// for (let i in student) {
+//     console.log('----loop 2 starts----')
+//     console.log(i + ' : ' + student[i])
+//     console.log('----loop 2 ends------')
+// }
 
 // output:
 
@@ -86,7 +86,7 @@ for of :  works with arrays, looping elements of array
 // ======================================================================================================
 
 /*
-Note : if know upper and lower limits then choose "for" loop
+Note : if know upper and lower boundaries then choose "for" loop
 
 
     syntax "for" loop :
@@ -117,7 +117,7 @@ Note : if know upper and lower limits then choose "for" loop
 
 /*
 
-Note : if don't know upper and lower limits,
+Note : if don't know upper and lower boundaries,
 but know condition then choose "while" loop
 
 
@@ -200,10 +200,10 @@ syntax "do" loop :
 console.log("do loop demo - 2, with failed condition")
 i = 6
 
-do{
+do {
     console.log(i + " : javascript")
     i++
-}while(i<=5)
+} while (i <= 5)
 
 console.log('after "do" loop "i" value - ' + i)
 

@@ -1,58 +1,8 @@
 describe('download file demo', () => {
 
-    it('1. download file with "cypress-downloadfile" plugin', () => {
-
-        // if another file already exist with same name, it replaces
-        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', 'tajmahal.jpg')
-        cy.readFile('cypress/downloads/tajmahal.jpg').should('exist')
-    })
-
-    // ============================================================================
-
-
-    it('2. ramdomly generating downloaded file name  -  "cypress-downloadfile" plugin', () => {
-
-        // every time new name is generating. so, file will not replace
-
-        let r = (Math.random() + 1).toString(36).substring(7)
-
-        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', 'tajmahal' + r + '.jpg')
-        cy.readFile('cypress/downloads/tajmahal' + r + '.jpg').should('exist')
-    })
-
-    // ============================================================================
-
-    it('3. variable using for downloaded file name  -  "cypress-downloadfile" plugin', () => {
-
-        // every time new name is generating. so, file will not replace
-
-        let r = (Math.random() + 1).toString(36).substring(7)
-        let downloadedFile = 'tajmahal' + r +'.jpg'
-
-        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', downloadedFile)
-        cy.readFile('cypress/downloads/'+ downloadedFile).should('exist')
-    })
-
-    // ============================================================================
-
-    it.only('4. downloading in "hari" folder -  "cypress-downloadfile" plugin', () => {
-
-        // every time new name is generating. so, file will not replace
-
-        let r = (Math.random() + 1).toString(36).substring(7)
-        let downloadedFile = 'tajmahal' + r +'.jpg'
-
-        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads/hari', downloadedFile)
-        cy.readFile('cypress/downloads/hari'+ downloadedFile).should('exist')
-    })
-
-})
-
-// =====================================================================================
-
     /*
  
-        to work this test, follow below steps :
+        to work these tests, follow below steps :
  
         step 1. install plugin in project folder
  
@@ -92,5 +42,55 @@ describe('download file demo', () => {
  
  
         */
+
+
+    it('1. download file with "cypress-downloadfile" plugin', () => {
+
+        // if another file already exist with same name, it replaces
+        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', 'tajmahal.jpg')
+        cy.readFile('cypress/downloads/tajmahal.jpg').should('exist')
+    })
+
+    // ============================================================================
+
+
+    it('2. ramdomly generating downloaded file name  -  "cypress-downloadfile" plugin', () => {
+
+        // every time new name is generating. so, file will not replace
+
+        let r = (Math.random() + 1).toString(36).substring(7)
+
+        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', 'tajmahal' + r + '.jpg')
+        cy.readFile('cypress/downloads/tajmahal' + r + '.jpg').should('exist')
+    })
+
+    // ============================================================================
+
+    it('3. variable using for downloaded file name  -  "cypress-downloadfile" plugin', () => {
+
+        // every time new name is generating. so, file will not replace
+
+        let r = (Math.random() + 1).toString(36).substring(7)
+        let downloadedFile = 'tajmahal' + r +'.jpg'
+
+        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', downloadedFile)
+        cy.readFile('cypress/downloads/'+ downloadedFile).should('exist')
+    })
+
+    // ============================================================================
+
+    it('4. downloading in "hari" folder -  "cypress-downloadfile" plugin', () => {
+
+        // every time new name is generating. so, file will not replace
+
+        let r = (Math.random() + 1).toString(36).substring(7)
+        let downloadedFile = 'tajmahal' + r +'.jpg'
+
+        cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads/hari', downloadedFile)
+        cy.readFile('cypress/downloads/hari/'+ downloadedFile).should('exist')
+    })
+
+})
+
 
     // ================================================================================================================
