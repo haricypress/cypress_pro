@@ -14,10 +14,7 @@ function countWords1(str) {
             }
 
         }
-        if (spaces == 0)
-            console.log("No of words : ", 1)
-        else
-            console.log("No of words : ", spaces)
+        console.log("No of words : ", spaces)
 
     }
 }
@@ -42,10 +39,7 @@ function countWords2(...args) {
                 }
 
             }
-            if (count == 0)
-                console.log("No of words : ", 1)
-            else
-                console.log("No of words : ", count)
+            console.log("No of words : ", count)
         }
     }
 }
@@ -65,6 +59,6 @@ function countWords3(str) {
     }
 }
 
-console.log(countWords3("i am an         indian"))
+console.log(countWords3("i am an            indian"))
 
 
