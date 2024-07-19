@@ -5,13 +5,13 @@
 
 // detailed
 function palindrome(str) {
-    console.log("str : ",str)
+    console.log("str : ", str)
 
     var a = str.split("")
     console.log("split :", a)
 
     b = a.reverse()
-   console.log("reverse spilt :", b)
+    console.log("reverse spilt :", b)
 
     b = b.join("")
     console.log("join :", b)
@@ -29,13 +29,12 @@ palindrome("ann")
 
 // short coding
 function palindromeOrNot(str) {
+
+
+    var reverseString = str.split("").reverse().join("")
+
+    console.log("reverse :", reverseString)
     console.log("str : ", str)
-
-    var a = str.split("")
-        .reverse()
-        .join("")
-
-    console.log("reverse :", a)
 
     if (str == a) {
         console.log("this is palindrome")
