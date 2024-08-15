@@ -2,27 +2,30 @@ describe("files demo", () => {
 
     // ======================  write file test cases  ==================
 
-    // it("text file - create and overwrite", () => {
+    it("text file - create and overwrite", () => {
 
-    //     cy.writeFile('cypress/fileDemo/writeFileDemo.txt', "hari kishore\sd")
-    // })
+        cy.writeFile('cypress/fileDemo/writeFileDemo.txt', "hari kishore")
+    })
     // // =======================================================================
-    // it("text file - create and append", () => {
+    it("text file - create and append", () => {
 
-    //     cy.writeFile('cypress/filesDemo/writeFileDemo.txt', "append hari kishore\n", { flag: 'a+' })
-    // })
+        cy.writeFile('cypress/filesDemo/writeFileDemo.txt', "append hari kishore\n", { flag: 'a+' })
+
+        /*    "/n" = new line
+              "{ flag: 'a+' }"  =  append to file /  add extra to file */
+    })
     // // =======================================================================
-    // it("json file - create and overwrite", () => {
+    it("json file - create and overwrite", () => {
 
-    //     cy.writeFile("cypress/fileDemo/writeFileDemo.json",
-    //         { 'firstName': 'hari', 'lastName': 'kishore' },)
-    // })
+        cy.writeFile("cypress/fileDemo/writeFileDemo.json",
+            { 'firstName': 'hari', 'lastName': 'kishore' },)
+    })
     // // =======================================================================
-    // it("json file - create and uppend", () => {
+    it("json file - create and uppend", () => {
 
-    //     cy.writeFile("cypress/fileDemo/writeFileDemo.json",
-    //         { 'firstName': 'hari', 'lastName': 'kishore' },{ flag: 'a+' })
-    // })
+        cy.writeFile("cypress/fileDemo/writeFileDemo.json",
+            { 'firstName': 'hari', 'lastName': 'kishore' },{ flag: 'a+' })
+    })
 
 
     

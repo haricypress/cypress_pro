@@ -4,14 +4,20 @@ describe('Find links on web page', () => {
 
         cy.visit('https://www.cypress.io/')
 
-        // cy.contains("API").click({force: true})  // to click on hidden menu option
-        // cy.contains("Docs").find('API')  // Error
+        // cy.contains("Docs").find('API')  // Error - it is hidden element
 
-        cy.get('a[class="font-secondary text-[14px] font-normal leading-[20px] text-teal-500 sm:text-gray-700 sm:hover:text-teal-600"]')
-        .invoke('show')
-        
-        // cy.get('a[class="font-secondary text-[14px] font-normal leading-[20px] text-teal-500 sm:text-gray-700 sm:hover:text-teal-600"]')
-        // .eq(0).click()
-        
+        // ================== way 1 =========================
+        // cy.contains("API").click({force: true})  // to click on hidden menu option
+
+        // ================== way 2 =========================
+
+        cy.contains('API')
+            .should('be.hidden')
+
+        cy.contains('API').invoke('show').should('be.visible')
+
+
+        cy.contains("Docs").find('API').invoke("removeAttr", "target").click()
+
     })
 })

@@ -62,7 +62,7 @@ describe("verify files demo ", () => {
     // ==============================================================================================
 
 
-    it.only("method 2: upload file with build-in JavaScript command'", () => {
+    it.only("method 2: upload file with build-in JavaScript command", () => {
         /* 
                 1) don't upload personal files, upload garbage data file
                 2) Note : before run this test case, create a txt file in "fixtures/22_files" folder,
@@ -74,22 +74,23 @@ describe("verify files demo ", () => {
         // cy.wait(3000)  // waiting 3 sec
 
 
-        // // 1) to upload single file
-        // var file = 'cypress/fixtures/22_files/file1.txt'
-        // cy.xpath('//input[@name="upfile"]')
-        //     .selectFile(file)
+        // 1) to upload single file
+        var file = 'cypress/fixtures/22_files/file1.txt'
+        cy.xpath('//input[@name="upfile"]')
+            .selectFile(file)
 
 
         // // 2) to upload multiple files
-        // cy.xpath('//input[@name="upfile"]').selectFile([
-        //     'cypress/fixtures/22_files/file1.txt',
-        //     'cypress/fixtures/22_files/file2.txt'])
+        cy.xpath('//input[@name="upfile"]')
+            .selectFile([
+                'cypress/fixtures/22_files/file1.txt',
+                'cypress/fixtures/22_files/file2.txt'])
 
 
-        
+
         // 3) using variable to pass file locations
         var fileLocation = ['22_files/file1.txt', '22_files/file2.txt']
-        cy.xpath('//input[@name="upfile"]').attachFile(fileLocation)
+        cy.xpath('//input[@name="upfile"]').selectFile(fileLocation)
 
 
 

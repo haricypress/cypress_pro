@@ -35,8 +35,8 @@ import 'cypress-file-upload';
 Cypress.Commands.add('orangeMRHlogin1', () => {
 
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-    cy.get('input[placeholder="Username"]').type("Admin")
-    cy.get('input[placeholder="Password"]').type("admin123")
+    cy.get('input[placeholder="username"]').type("Admin")
+    cy.get('input[placeholder="password"]').type("admin123")
     cy.get('button[type="submit"]').click()
 
 })
@@ -50,8 +50,8 @@ Cypress.Commands.add('orangeMRHlogin1', () => {
 Cypress.Commands.add('orangeMRHlogin2', (username,password) => {
 
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-    cy.get('input[placeholder="Username"]').type(username)
-    cy.get('input[placeholder="Password"]').type(password)
+    cy.get('input[placeholder="username"]').type(username)
+    cy.get('input[placeholder="password"]').type(password)
     cy.get('button[type="submit"]').click()
 
 })

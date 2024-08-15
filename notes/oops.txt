@@ -1,0 +1,57 @@
+
+oops:
+==============================================================================
+
+static and non-static:
+non-static variables and methods are calling with object name only,
+can't access without object name,
+          class is a logical enity,  not occupy memory,
+          only objects occupy memory,
+          non-static variables and methods storing in objects.
+
+static variables and methods storing in separate memory, not in objects
+          no need create object and call with class name.
+==============================================================================
+constructor is a method,
+if class object available, it will call automatically (no need explicit call),
+use "this" keywork while calling with "constructor"
+
+constructor is a method,
+if class object available, it will call automatically, no need explicit call,
+while calling non-static methods, variables from  "constructor" use "this" keywork.
+==============================================================================
+encapsulation : binding data between methods
+
+inheritance :   accessing one class's variables and methods with another class's object
+
+ object create for child class, no need object creation for parent class.
+
+accessed class   - parent \ super class
+accessing class  - child \ derived class
+
+"extends" keyword used to create inheritance
+
+types of inheritance :
+
+1) single  ( a--> b ), "a" is parent class, "b" is child class
+2) multi-level  ( a--> b --> c ), "a" is parent class to "b",   "b" is parent class to "c"
+
+Note : multiple inheritance is not supported in javascript
+
+( a --> b <-- c), "a" and "c" are parent classes to "b"
+==============================================================================
+polymorphism : method overriding
+
+if any method / variable has same name in parent and child classes then
+executing child class method / variable.
+
+polymorphism : method overloading
+
+if calling method by different no.of parameters then executing most similar method,
+if multiple methods with same name, different no.of parameters then executing last method
+==============================================================================
+ prototype :
+prototype is class dependant,
+creating variables / methods outside of class and accessing by object,
+must create before object creation.
+==============================================================================

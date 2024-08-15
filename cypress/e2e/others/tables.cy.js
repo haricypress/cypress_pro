@@ -1,11 +1,11 @@
 
 describe('Automation - Working With Tables in webpage', function () {
 
-    // beforeEach("open web page", () => {
+    beforeEach("open web page", () => {
 
-    //     cy.visit('https://money.rediff.com/indices/bse/sensex?src=moneyhome_bseIndices')
+        cy.visit('https://money.rediff.com/indices/bse/sensex?src=moneyhome_bseIndices')
 
-    // })// =================================================================================
+    })// =================================================================================
 
     it('1. table - basic operations', function () {
 
@@ -42,19 +42,7 @@ describe('Automation - Working With Tables in webpage', function () {
 
         // cy.visit('cypress/htmlFiles/table.html')
         cy.visit('https://testautomationpractice.blogspot.com/')
-
-
-        // using within()  -  find
-        // cy.xpath('//table[@name="BookTable"]/tbody/tr[6]').within(() => {
-
-        //     cy.get('td').eq(0).then((variable_ele) => {
-
-        //         var text = variable_ele.text()
-        //         cy.log(text)
-
-        //     })
-        // })
-        // ===========================================
+        
 
         // using each()  -  iterative
         cy.xpath('//table[@name="BookTable"]').each((details) => {

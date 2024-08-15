@@ -1,4 +1,4 @@
-// 17)  polymorphism demo - 3, method loading - some methods with same name
+// 17)  polymorphism demo - 3, method over loading - some methods with same name
 
 
 class A{

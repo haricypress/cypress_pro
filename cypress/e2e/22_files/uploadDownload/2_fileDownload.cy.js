@@ -44,7 +44,7 @@ describe('download file demo', () => {
         */
 
 
-    it('1. download file with "cypress-downloadfile" plugin', () => {
+    it('1. hard-coding filename used - "cypress-downloadfile" plugin', () => {
 
         // if another file already exist with same name, it replaces
         cy.downloadFile('https://www.tajmahal.gov.in/images/nightview.jpg', 'cypress/downloads', 'tajmahal.jpg')
@@ -54,7 +54,7 @@ describe('download file demo', () => {
     // ============================================================================
 
 
-    it('2. ramdomly generating downloaded file name  -  "cypress-downloadfile" plugin', () => {
+    it('2. randomly generating downloaded file name  -  "cypress-downloadfile" plugin', () => {
 
         // every time new name is generating. so, file will not replace
 

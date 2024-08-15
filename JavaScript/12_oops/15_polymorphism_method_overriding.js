@@ -1,13 +1,13 @@
 /*
 polymorphism : method overriding
 
-if any method / variable is there with same name in parent and child classes then
+if any method / variable has same name in parent and child classes then
 executing child class method / variable.
 
 polymorphism : method overloading
 
-if calling a method with different no.of parameters then executing most similar method,
-if some methods with same name and different no.of parameters are there then executing last method
+if calling method by different no.of parameters then executing most similar method,
+if multiple methods with same name, different no.of parameters then executing last method
 
 
 */
@@ -40,7 +40,7 @@ if some methods with same name and different no.of parameters are there then exe
 
 // const b_obj = new B()  // class B object creating
 
-// console.log(b_obj.a)  // accessing class B - variable "a"
+// console.log(b_obj.a)  // accessing class B - variable a
 
 // b_obj.show(10)
 

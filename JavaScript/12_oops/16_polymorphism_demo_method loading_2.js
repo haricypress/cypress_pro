@@ -1,4 +1,4 @@
-// 16)  polymorphism demo - 2, method loading - a method calling with different no.of parameters
+// 16)  polymorphism demo - 2, method over loading - a method calling with different no.of parameters
 
 
 // class A{
