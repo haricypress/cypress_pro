@@ -8,7 +8,10 @@ console.log("string2 (replacing with this string) : ", str2)
 
 // replaceing """ and "," with empty i.e., ""
 console.log("before replace: ", str1)
-console.log("after replace: ",str1.replace('"', "").replaceAll('"', ""))
+console.log("after replace: ",str1.replace('"', ""))
+
+console.log("before replace: ", str1)
+console.log("after replace: ",str1.replaceAll('"', ""))
 
 
 // replacing "," with empty i.e., ""

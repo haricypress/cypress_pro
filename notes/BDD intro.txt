@@ -33,7 +33,7 @@ module.exports = (on, config) => {
 7) goto "node_modules\cypress-cucumber-preprocessor\lib\stepDefinitionPath.test.js"  file
 search for    :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}integration`;
 change to     :    const defaultNonGlobalStepDefinitionsPath = `cypress${sep}e2e`;
-=============================================================================================
+==========================================================================
 
 
 
