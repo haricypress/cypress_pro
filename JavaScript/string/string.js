@@ -1,3 +1,61 @@
+var string = "0123456789abcdefg"
+// console.log("\noriginal string :",string,"\n\n")
+
+
+
+// splice - arrays
+// var reverseString = string.split("").splice()
+// console.log(reverseString)  
+// var reverseString = string.split("").splice(3)
+// console.log(reverseString)  
+// var reverseString = string.split("").splice(8,3)
+// console.log(reverseString)  
+
+
+
+//slice
+// var reverseString = string.slice()
+// console.log(reverseString)  
+// var reverseString = string.slice(2)
+// console.log(reverseString)  
+// var reverseString = string.slice(2,3)
+// console.log(reverseString)  
+
+
+// trim - removing spaces at beginign & ending
+// var reverseString = string.trim()
+// console.log(reverseString)  
+
+
+
+// length
+// var reverseString = string.length
+// console.log(reverseString)  
+
+//lowe case
+// var reverseString = string.toLowerCase()
+// console.log(reverseString)  
+
+//upper case
+// var reverseString = string.toUpperCase()
+// console.log(reverseString)  
+
+
+//indexOf
+// var reverseString = string.indexOf("i")
+// console.log(reverseString)  
+
+
+
+// substring
+// var reverseString = string.substring(3)
+// console.log(reverseString)  
+
+// var reverseString = string.substring(3,11)
+// console.log(reverseString)  
+
+
+
 // // 1)
 // var x = "hari"  // with double quotes, "var" datatype
 // var y = `Kishore`   // with backlet
