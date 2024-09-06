@@ -11,7 +11,8 @@
 ======================================================================================
 */
 
-// // Create a Map with array
+// // getting value by key
+
 // const fruits1 = new Map([
 //     ["apples", 500],
 //     ["bananas", 300],
@@ -115,7 +116,7 @@
 // fruits1.clear()
 // console.log(fruits1)
 // ===============================================
-// has() - cheacks element available or not
+// has() - checking element is available or not
 // return true  - if available
 //        false - if not available
 
@@ -132,7 +133,7 @@
 
 // ===============================================
 
-// foreach() - getting all entries with key/value
+// foreach() - getting all elements with key/value
 
 // const fruits1 = new Map([
 //     ["apples", 500],
