@@ -6,19 +6,17 @@
 // 3. rejected
 
 
-function myResolved(some) {
+function success(some) {
     console.log(some)
   }
   
-  function myRejected(some) {
+  function failed(some) {
     console.log(some)
   }
   
 
 let myPromise = new Promise(function(myResolve, myReject) {
     let x = 0;
-  
-  // The producing code (this may take some time)
   
     if (x == 0) {
       myResolve("OK");
@@ -28,6 +26,6 @@ let myPromise = new Promise(function(myResolve, myReject) {
   });
   
   myPromise.then(
-    function(value) {myResolved(value)},
-    function(error) {myRejected(error)}
+    function(value) {success(value)},
+    function(error) {failed(error)}
   );
